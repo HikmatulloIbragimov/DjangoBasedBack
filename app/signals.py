@@ -5,6 +5,11 @@ import yaml
 import os
 from .models import Game, Server, Category, Merchandise, Card
 
+
+
+class NoAliasDumper(yaml.SafeDumper):
+    def ignore_aliases(self, data):
+        return True
 class YAMLGenerator:
     def __init__(self):
         self.yaml_dir = getattr(settings, 'YAML_OUTPUT_DIR', 'yaml_exports')
@@ -42,11 +47,12 @@ class YAMLGenerator:
                 'games': games_data,
                 'cards': cards_data
             }
-            
             # Write to app.yaml
             app_yaml_path = os.path.join(self.yaml_dir, 'app.yaml')
-            with open(app_yaml_path, 'w+', encoding='utf-8') as file:
-                yaml.dump(app_data, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
+            with open(app_yaml_path, 'w', encoding='utf-8') as file:
+                yaml.dump(app_data, file, Dumper=NoAliasDumper, allow_unicode=True, default_flow_style=False, sort_keys=False)
+
+
             
             print(f"Generated app.yaml at {app_yaml_path}")
             
@@ -129,7 +135,8 @@ class YAMLGenerator:
             os.makedirs(os.path.join(self.yaml_dir, 'game'), exist_ok=True)
             game_yaml_path = os.path.join(self.yaml_dir, f'game/{game_slug}.yaml')
             with open(game_yaml_path, 'w+', encoding='utf-8') as file:
-                yaml.dump(game_data, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
+                yaml.dump(game_data, file, Dumper=NoAliasDumper, allow_unicode=True, default_flow_style=False, sort_keys=False)
+
             
             print(f"Generated {game_slug}.yaml at {game_yaml_path}")
             
