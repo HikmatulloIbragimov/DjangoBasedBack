@@ -1,8 +1,17 @@
-yaml_exports/*
+# IDE / редактор
+.vscode/
+.history/
 
-.history/*
-.vscode/*
-db.slite3
+# SQLite DB
+db.sqlite3
 db.sqbpro
+
+# Redis dump
 dump.rdb
+
+# YAML экспорты
+yaml_exports/
+
+# Файлы env
+.env
 .env.env
