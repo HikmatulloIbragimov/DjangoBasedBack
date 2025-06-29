@@ -18,12 +18,11 @@ def get_app_yaml(request):
         raise Http404("app.yaml не найден")
     return FileResponse(open(yaml_path, 'rb'), content_type="text/yaml")
 
-
-def get_app_yaml(request):
-    yaml_path = os.path.join(settings.YAML_OUTPUT_DIR, 'app.yaml')
+def get_game_yaml(request, filename):
+    yaml_path = os.path.join(settings.YAML_OUTPUT_DIR, 'game', f'{filename}.yaml')
+    print(f"Serving {filename}.yaml from: {yaml_path}, exists: {os.path.exists(yaml_path)}")
     if not os.path.exists(yaml_path):
-        raise Http404("app.yaml не найден")
-    
+        raise Http404("YAML файл не найден")
     return FileResponse(open(yaml_path, 'rb'), content_type="text/yaml")
 
 def get_user(request):
