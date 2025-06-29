@@ -106,7 +106,9 @@ CELERY_RESULT_BACKEND = 'django-db'
 #     BASE_DIR / 'cdn',
 # ]
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = TRUE
+SECURE_SSL_REDIRECT = False
+
 SESSION_COOKIE_SECURE = True
 
 YAML_OUTPUT_DIR = '/var/www/tezkor-donat/static/config/'
