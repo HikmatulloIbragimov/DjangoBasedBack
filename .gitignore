@@ -10,7 +10,7 @@ db.sqbpro
 dump.rdb
 
 # YAML экспорты
-yaml_exports/
+# yaml_exports/
 
 # Файлы env
 .env

@@ -1,0 +1,96 @@
+game:
+  name: 'League of Legends: Wild Rift'
+  name_ru: 'Лига Легенд: Wild Rift'
+  name_en: 'League of Legends: Wild Rift'
+  slug: leage-of-legends
+  image_path: https://cdn.moogold.com/2020/12/lol-wild-rift-445x445.jpg
+  servers: []
+  inputs: null
+  categories:
+  - name: Birliklar
+    name_ru: Основная валюта
+    name_en: Cores
+    description: Birlik (Wild Core) — bu Wild Rift o‘yinidagi premium valyuta.
+    description_ru: Wild Core — это премиальная валюта в игре Wild Rift.
+    description_en: 'Wild Core is the premium currency in League of Legends: Wild
+      Rift.'
+    slug: wild-core
+  merchandise:
+  - id: 24
+    name: 425 cores
+    name_ru: 425 ядер
+    name_en: 425 cores
+    prices:
+    - price: 48000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
+    tags: []
+    server: ''
+    slug: lol-425-cores
+  - id: 25
+    name: 1000 cores
+    name_ru: 1000 ядер
+    name_en: 1000 cores
+    prices:
+    - price: 105000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
+    tags: []
+    server: ''
+    slug: lol-1000-cores
+  - id: 26
+    name: 1850 cores
+    name_ru: 1850 ядер
+    name_en: 1850 cores
+    prices:
+    - price: 190000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
+    tags: []
+    server: ''
+    slug: lol-1850-cores
+  - id: 27
+    name: 3275 cores
+    name_ru: 3275 ядер
+    name_en: 3275 cores
+    prices:
+    - price: 330000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
+    tags: []
+    server: ''
+    slug: lol-3275-cores
+  - id: 28
+    name: 4800 cores
+    name_ru: 4800 ядер
+    name_en: 4800 cores
+    prices:
+    - price: 470000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
+    tags: []
+    server: ''
+    slug: lol-4800-cores
+  - id: 29
+    name: 10000 cores
+    name_ru: 10000 ядер
+    name_en: 10000 cores
+    prices:
+    - price: 950000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
+    tags: []
+    server: ''
+    slug: lol-10000-cores

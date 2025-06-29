@@ -1,0 +1,59 @@
+games:
+- name: 'League of Legends: Wild Rift'
+  name_ru: 'Лига Легенд: Wild Rift'
+  name_en: 'League of Legends: Wild Rift'
+  slug: leage-of-legends
+  image_path: https://cdn.moogold.com/2020/12/lol-wild-rift-445x445.jpg
+- name: Mobile Lengends (Global)
+  name_ru: Мобайл Легендс (Глобал)
+  name_en: Mobile Legends (Global)
+  slug: mobile-legends-global
+  image_path: https://cdn.moogold.com/2019/11/mobile-legends-bang-bang-445x445.jpg
+- name: Fc Mobile
+  name_ru: ФК Мобайл
+  name_en: Fc Mobile
+  slug: fc-mobile
+  image_path: https://cdn.moogold.com/2023/06/FIFA-Mobile.jpg
+- name: Arena of Valor (ID)
+  name_ru: Арена Доблести (ID)
+  name_en: Arena of Valor (ID)
+  slug: arena-of-valor-id
+  image_path: https://cdn.moogold.com/2022/11/arena-of-valor.jpg
+- name: Pubg
+  name_ru: Пубг
+  name_en: Pubg
+  slug: pubg
+  image_path: https://cdn.moogold.com/2019/08/pubg-445x445.jpg
+- name: Free Fire
+  name_ru: Фри Фаер
+  name_en: Free Fire
+  slug: free-fire
+  image_path: https://cdn.moogold.com/2024/07/garena-free-fire.jpg
+- name: HOK
+  name_ru: ХОК
+  name_en: HOK
+  slug: hok
+  image_path: https://cdn.moogold.com/2023/09/honor-of-kings.jpg
+- name: Arena Breakout
+  name_ru: Арена Прорыва
+  name_en: Arena Breakout
+  slug: arena-breakout
+  image_path: https://cdn.moogold.com/2023/07/arena-breakout.jpg
+- name: Blood Strike
+  name_ru: Блад Страйк
+  name_en: Blood Strike
+  slug: blood-strike
+  image_path: https://cdn.moogold.com/2023/11/blood-strike.jpg
+- name: Genshin Impact
+  name_ru: Геншин Импакт
+  name_en: Genshin Impact
+  slug: genshin-impact
+  image_path: https://cdn.moogold.com/2020/10/genshin-impact-logo-revised.jpg
+- name: Steam gift card (USD)
+  name_ru: Steam подарочная карта (USD)
+  name_en: Steam gift card (USD)
+  slug: steam-gift-card-usd
+  image_path: https://cdn.moogold.com/2019/12/USA.jpg
+cards:
+- number: '123123123123'
+  cardholder_name: Abror Qodirov

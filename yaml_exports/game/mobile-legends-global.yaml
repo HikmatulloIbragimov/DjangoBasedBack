@@ -1,0 +1,239 @@
+game:
+  name: Mobile Lengends (Global)
+  name_ru: Мобайл Легендс (Глобал)
+  name_en: Mobile Legends (Global)
+  slug: mobile-legends-global
+  image_path: https://cdn.moogold.com/2019/11/mobile-legends-bang-bang-445x445.jpg
+  servers: []
+  inputs: user_id,server_id
+  categories:
+  - name: 1 martalik olmos
+    name_ru: 1 разовый алмаз
+    name_en: One-time diamond
+    description: Bir martalik sotib olinadigan olmos.
+    description_ru: Разовая покупка алмазов.
+    description_en: One-time purchase of diamonds.
+    slug: one-time-diamond
+  - name: olmos
+    name_ru: алмаз
+    name_en: Diamond
+    description: Doimiy sotib olinadigan olmos.
+    description_ru: Постоянно покупаемые алмазы.
+    description_en: Regularly purchasable diamonds.
+    slug: diamond
+  - name: obuna
+    name_ru: подписка
+    name_en: Subscription
+    description: Oʻyinga doimiy obuna.
+    description_ru: Постоянная подписка на игру.
+    description_en: Recurring game subscription.
+    slug: subscription
+  merchandise:
+  - id: 8
+    name: 500 + 65 Diamonds (First Top-Up Bonus)
+    name_ru: 500 + 65 алмазов (бонус первого пополнения)
+    name_en: 500 + 65 Diamonds (First Top-Up Bonus)
+    prices:
+    - price: 100000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: one-time-diamond
+    tags: []
+    server: ''
+    slug: ml-500-65-diamonds-first-bonus
+  - id: 9
+    name: 250 + 25 Diamonds (First Top-Up Bonus)
+    name_ru: 250 + 25 алмазов (бонус первого пополнения)
+    name_en: 250 + 25 Diamonds (First Top-Up Bonus)
+    prices:
+    - price: 50000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: one-time-diamond
+    tags: []
+    server: ''
+    slug: ml-250-25-diamonds-first-bonus
+  - id: 10
+    name: 150 + 15 Diamonds (First Top-Up Bonus)
+    name_ru: 150 + 15 алмазов (бонус первого пополнения)
+    name_en: 150 + 15 Diamonds (First Top-Up Bonus)
+    prices:
+    - price: 35000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: one-time-diamond
+    tags: []
+    server: ''
+    slug: ml-150-15-diamonds-first-bonus
+  - id: 11
+    name: 50 + 5 Diamonds (First Top-Up Bonus)
+    name_ru: 50 + 5 алмазов (бонус первого пополнения)
+    name_en: 50 + 5 Diamonds (First Top-Up Bonus)
+    prices:
+    - price: 12000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: one-time-diamond
+    tags: []
+    server: ''
+    slug: ml-50-5-diamonds-first-bonus
+  - id: 12
+    name: 7740 Diamonds + 1548 Bonus
+    name_ru: 7740 алмазов + 1548 бонус
+    name_en: 7740 Diamonds + 1548 Bonus
+    prices:
+    - price: 1420000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ml-7740-diamonds-1548-bonus
+  - id: 13
+    name: 4649 Diamonds + 883 Bonus
+    name_ru: 4649 алмазов + 883 бонус
+    name_en: 4649 Diamonds + 883 Bonus
+    prices:
+    - price: 890000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ml-4649-diamonds-883-bonus
+  - id: 14
+    name: 3099 Diamonds + 589 Bonus
+    name_ru: 3099 алмазов + 589 бонус
+    name_en: 3099 Diamonds + 589 Bonus
+    prices:
+    - price: 590000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ml-3099-diamonds-589-bonus
+  - id: 15
+    name: 1860 Diamonds + 335 Bonus
+    name_ru: 1860 алмазов + 335 бонус
+    name_en: 1860 Diamonds + 335 Bonus
+    prices:
+    - price: 350000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ml-1860-diamonds-335-bonus
+  - id: 16
+    name: 625 Diamonds + 81 Bonus
+    name_ru: 625 алмазов + 81 бонус
+    name_en: 625 Diamonds + 81 Bonus
+    prices:
+    - price: 120000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ml-625-diamonds-81-bonus
+  - id: 17
+    name: 234 Diamonds + 23 Bonus
+    name_ru: 234 алмаза + 23 бонус
+    name_en: 234 Diamonds + 23 Bonus
+    prices:
+    - price: 45000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ml-234-diamonds-23-bonus
+  - id: 18
+    name: 156 Diamonds + 16 Bonus
+    name_ru: 156 алмазов + 16 бонус
+    name_en: 156 Diamonds + 16 Bonus
+    prices:
+    - price: 31000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ml-156-diamonds-16-bonus
+  - id: 19
+    name: 78 Diamonds + 8 Bonus
+    name_ru: 78 алмазов + 8 бонус
+    name_en: 78 Diamonds + 8 Bonus
+    prices:
+    - price: 16000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ml-78-diamonds-8-bonus
+  - id: 20
+    name: 10 + 1 Diamonds
+    name_ru: 10 + 1 алмаз
+    name_en: 10 + 1 Diamonds
+    prices:
+    - price: 3500
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ml-10-1-diamonds
+  - id: 21
+    name: 20 + 2 Diamonds
+    name_ru: 20 + 2 алмаза
+    name_en: 20 + 2 Diamonds
+    prices:
+    - price: 7000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ml-20-2-diamonds
+  - id: 22
+    name: Weekly Pass
+    name_ru: Недельный пропуск
+    name_en: Weekly Pass
+    prices:
+    - price: 20000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: ml-weekly-pass
+  - id: 23
+    name: Twilight Pass
+    name_ru: Сумеречный пропуск
+    name_en: Twilight Pass
+    prices:
+    - price: 105000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: ml-twilight-pass

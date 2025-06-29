@@ -1,0 +1,17 @@
+game:
+  name: Steam gift card (USD)
+  name_ru: Steam подарочная карта (USD)
+  name_en: Steam gift card (USD)
+  slug: steam-gift-card-usd
+  image_path: https://cdn.moogold.com/2019/12/USA.jpg
+  servers: []
+  inputs: null
+  categories:
+  - name: USD
+    name_ru: USD
+    name_en: USD
+    description: AQSH dollarida qiymat.
+    description_ru: Стоимость в долларах США.
+    description_en: Value in USD.
+    slug: usd
+  merchandise: []

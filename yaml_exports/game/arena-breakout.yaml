@@ -1,0 +1,180 @@
+game:
+  name: Arena Breakout
+  name_ru: Арена Прорыва
+  name_en: Arena Breakout
+  slug: arena-breakout
+  image_path: https://cdn.moogold.com/2023/07/arena-breakout.jpg
+  servers: []
+  inputs: null
+  categories:
+  - name: obuna
+    name_ru: подписка
+    name_en: Subscription
+    description: Oʻyinga doimiy obuna.
+    description_ru: Постоянная подписка на игру.
+    description_en: Recurring game subscription.
+    slug: subscription
+  - name: bond
+    name_ru: облигация
+    name_en: Bond
+    description: Alohida valyuta turi (masalan, HOK uchun).
+    description_ru: Отдельный тип валюты (например, для HOK).
+    description_en: Special currency type (e.g. for HOK).
+    slug: bond
+  merchandise:
+  - id: 73
+    name: Beginner Select
+    name_ru: Выбор новичка
+    name_en: Beginner Select
+    prices:
+    - price: 12000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: ab-beginner-select
+  - id: 74
+    name: Premium Battle Pass
+    name_ru: Премиум боевой пропуск
+    name_en: Premium Battle Pass
+    prices:
+    - price: 145000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: ab-premium-battle-pass
+  - id: 75
+    name: Bulletproof Case Privileges
+    name_ru: Привилегии бронированного кейса
+    name_en: Bulletproof Case Privileges
+    prices:
+    - price: 45000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: ab-bulletproof-case-privileges
+  - id: 76
+    name: Elite Trial (30d) + 300 Bonds
+    name_ru: Элитная пробная версия (30д) + 300 облигаций
+    name_en: Elite Trial (30d) + 300 Bonds
+    prices:
+    - price: 52000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: ab-elite-trial-30d-300-bonds
+  - id: 77
+    name: Advanced Battle Pass
+    name_ru: Продвинутый боевой пропуск
+    name_en: Advanced Battle Pass
+    prices:
+    - price: 52000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: ab-advanced-battle-pass
+  - id: 78
+    name: Composite Case Privileges
+    name_ru: Привилегии составного кейса
+    name_en: Composite Case Privileges
+    prices:
+    - price: 95000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: ab-composite-case-privileges
+  - id: 79
+    name: 60 + 6 Bonds
+    name_ru: 60 + 6 облигаций
+    name_en: 60 + 6 Bonds
+    prices:
+    - price: 15000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: bond
+    tags: []
+    server: ''
+    slug: ab-60-6-bonds
+  - id: 80
+    name: 310 + 25 Bonds
+    name_ru: 310 + 25 облигаций
+    name_en: 310 + 25 Bonds
+    prices:
+    - price: 60000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: bond
+    tags: []
+    server: ''
+    slug: ab-310-25-bonds
+  - id: 81
+    name: 630 + 45 Bonds
+    name_ru: 630 + 45 облигаций
+    name_en: 630 + 45 Bonds
+    prices:
+    - price: 125000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: bond
+    tags: []
+    server: ''
+    slug: ab-630-45-bonds
+  - id: 82
+    name: 1580 + 110 Bonds
+    name_ru: 1580 + 110 облигаций
+    name_en: 1580 + 110 Bonds
+    prices:
+    - price: 310000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: bond
+    tags: []
+    server: ''
+    slug: ab-1580-110-bonds
+  - id: 83
+    name: 3200 + 200 Bonds
+    name_ru: 3200 + 200 облигаций
+    name_en: 3200 + 200 Bonds
+    prices:
+    - price: 590000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: bond
+    tags: []
+    server: ''
+    slug: ab-3200-200-bonds
+  - id: 84
+    name: 6500 + 320 Bonds
+    name_ru: 6500 + 320 облигаций
+    name_en: 6500 + 320 Bonds
+    prices:
+    - price: 1150000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: bond
+    tags: []
+    server: ''
+    slug: ab-6500-320-bonds

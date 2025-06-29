@@ -1,0 +1,128 @@
+game:
+  name: Pubg
+  name_ru: Пубг
+  name_en: Pubg
+  slug: pubg
+  image_path: https://cdn.moogold.com/2019/08/pubg-445x445.jpg
+  servers: []
+  inputs: null
+  categories:
+  - name: obuna
+    name_ru: подписка
+    name_en: Subscription
+    description: Oʻyinga doimiy obuna.
+    description_ru: Постоянная подписка на игру.
+    description_en: Recurring game subscription.
+    slug: subscription
+  - name: uc
+    name_ru: UC
+    name_en: UC
+    description: PUBG valyutasi – Unknown Cash.
+    description_ru: Валюта PUBG — Unknown Cash.
+    description_en: PUBG currency — Unknown Cash.
+    slug: uc
+  merchandise:
+  - id: 38
+    name: 60 Unknown Cash
+    name_ru: 60 неизвестной валюты
+    name_en: 60 Unknown Cash
+    prices:
+    - price: 13000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: uc
+    tags: []
+    server: ''
+    slug: pubg-60-uc
+  - id: 39
+    name: 325 Unknown Cash
+    name_ru: 325 неизвестной валюты
+    name_en: 325 Unknown Cash
+    prices:
+    - price: 59000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: uc
+    tags: []
+    server: ''
+    slug: pubg-325-uc
+  - id: 40
+    name: 660 Unknown Cash
+    name_ru: 660 неизвестной валюты
+    name_en: 660 Unknown Cash
+    prices:
+    - price: 118000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: uc
+    tags: []
+    server: ''
+    slug: pubg-660-uc
+  - id: 41
+    name: 1800 Unknown Cash
+    name_ru: 1800 неизвестной валюты
+    name_en: 1800 Unknown Cash
+    prices:
+    - price: 299000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: uc
+    tags: []
+    server: ''
+    slug: pubg-1800-uc
+  - id: 42
+    name: 3850 Unknown Cash
+    name_ru: 3850 неизвестной валюты
+    name_en: 3850 Unknown Cash
+    prices:
+    - price: 590000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: uc
+    tags: []
+    server: ''
+    slug: pubg-3850-uc
+  - id: 43
+    name: 8100 Unknown Cash
+    name_ru: 8100 неизвестной валюты
+    name_en: 8100 Unknown Cash
+    prices:
+    - price: 1180000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: uc
+    tags: []
+    server: ''
+    slug: pubg-8100-uc
+  - id: 44
+    name: Elite RP Upgrade Pack
+    name_ru: Элитный пакет улучшения RP
+    name_en: Elite RP Upgrade Pack
+    prices:
+    - price: 370000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: pubg-elite-rp-upgrade
+  - id: 45
+    name: RP Upgrade Pack
+    name_ru: Пакет улучшения RP
+    name_en: RP Upgrade Pack
+    prices:
+    - price: 135000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: pubg-rp-upgrade

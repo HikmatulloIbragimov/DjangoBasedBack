@@ -1,0 +1,173 @@
+game:
+  name: Blood Strike
+  name_ru: Блад Страйк
+  name_en: Blood Strike
+  slug: blood-strike
+  image_path: https://cdn.moogold.com/2023/11/blood-strike.jpg
+  servers: []
+  inputs: null
+  categories:
+  - name: oltin
+    name_ru: золото
+    name_en: Gold
+    description: Oddiy oʻyin ichidagi oltin.
+    description_ru: Обычное внутриигровое золото.
+    description_en: Standard in-game gold.
+    slug: gold
+  merchandise:
+  - id: 85
+    name: Inkforge Eternal Valor Pre-Order Begins
+    name_ru: Предзаказ Inkforge Eternal Valor начинается
+    name_en: Inkforge Eternal Valor Pre-Order Begins
+    prices:
+    - price: 25000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: bs-inkforge-eternal-valor-preorder
+  - id: 86
+    name: 50 + 6 Gold
+    name_ru: 50 + 6 золота
+    name_en: 50 + 6 Gold
+    prices:
+    - price: 7000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: gold
+    tags: []
+    server: ''
+    slug: bs-50-6-gold
+  - id: 87
+    name: 100 + 16 Gold
+    name_ru: 100 + 16 золота
+    name_en: 100 + 16 Gold
+    prices:
+    - price: 13000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: gold
+    tags: []
+    server: ''
+    slug: bs-100-16-gold
+  - id: 88
+    name: 300 + 52 Gold
+    name_ru: 300 + 52 золота
+    name_en: 300 + 52 Gold
+    prices:
+    - price: 35000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: gold
+    tags: []
+    server: ''
+    slug: bs-300-52-gold
+  - id: 89
+    name: 500 + 94 Gold
+    name_ru: 500 + 94 золота
+    name_en: 500 + 94 Gold
+    prices:
+    - price: 55000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: gold
+    tags: []
+    server: ''
+    slug: bs-500-94-gold
+  - id: 90
+    name: 1000 + 210 Gold
+    name_ru: 1000 + 210 золота
+    name_en: 1000 + 210 Gold
+    prices:
+    - price: 110000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: gold
+    tags: []
+    server: ''
+    slug: bs-1000-210-gold
+  - id: 91
+    name: 2000 + 486 Gold
+    name_ru: 2000 + 486 золота
+    name_en: 2000 + 486 Gold
+    prices:
+    - price: 230000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: gold
+    tags: []
+    server: ''
+    slug: bs-2000-486-gold
+  - id: 92
+    name: 5000 + 1380 Gold
+    name_ru: 5000 + 1380 золота
+    name_en: 5000 + 1380 Gold
+    prices:
+    - price: 540000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: gold
+    tags: []
+    server: ''
+    slug: bs-5000-1380-gold
+  - id: 93
+    name: Level-Up Pass
+    name_ru: Пропуск повышения уровня
+    name_en: Level-Up Pass
+    prices:
+    - price: 30000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: bs-level-up-pass
+  - id: 94
+    name: Ultra Skin Lucky Chest
+    name_ru: Удачный сундук ультра скина
+    name_en: Ultra Skin Lucky Chest
+    prices:
+    - price: 10000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: bs-ultra-skin-lucky-chest
+  - id: 95
+    name: Strike Pass Premium
+    name_ru: Страйк пропуск премиум
+    name_en: Strike Pass Premium
+    prices:
+    - price: 120000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: bs-strike-pass-premium
+  - id: 96
+    name: Strike Pass Elite
+    name_ru: Страйк пропуск элит
+    name_en: Strike Pass Elite
+    prices:
+    - price: 55000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: bs-strike-pass-elite

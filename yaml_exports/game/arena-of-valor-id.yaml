@@ -1,0 +1,121 @@
+game:
+  name: Arena of Valor (ID)
+  name_ru: Арена Доблести (ID)
+  name_en: Arena of Valor (ID)
+  slug: arena-of-valor-id
+  image_path: https://cdn.moogold.com/2022/11/arena-of-valor.jpg
+  servers: []
+  inputs: null
+  categories:
+  - name: vaucherlar
+    name_ru: ваучеры
+    name_en: Vouchers
+    description: Toʻlov uchun maxsus kodlar.
+    description_ru: Специальные коды для оплаты.
+    description_en: Special payment vouchers.
+    slug: vouchers
+  merchandise:
+  - id: 30
+    name: 40 Vouchers
+    name_ru: 40 ваучеров
+    name_en: 40 Vouchers
+    prices:
+    - price: 9000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: vouchers
+    tags: []
+    server: ''
+    slug: aov-40-vouchers
+  - id: 31
+    name: 90 Vouchers
+    name_ru: 90 ваучеров
+    name_en: 90 Vouchers
+    prices:
+    - price: 18000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: vouchers
+    tags: []
+    server: ''
+    slug: aov-90-vouchers
+  - id: 32
+    name: 230 Vouchers
+    name_ru: 230 ваучеров
+    name_en: 230 Vouchers
+    prices:
+    - price: 42000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: vouchers
+    tags: []
+    server: ''
+    slug: aov-230-vouchers
+  - id: 33
+    name: 470 Vouchers
+    name_ru: 470 ваучеров
+    name_en: 470 Vouchers
+    prices:
+    - price: 80000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: vouchers
+    tags: []
+    server: ''
+    slug: aov-470-vouchers
+  - id: 34
+    name: 950 Vouchers
+    name_ru: 950 ваучеров
+    name_en: 950 Vouchers
+    prices:
+    - price: 165000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: vouchers
+    tags: []
+    server: ''
+    slug: aov-950-vouchers
+  - id: 35
+    name: 1430 Vouchers
+    name_ru: 1430 ваучеров
+    name_en: 1430 Vouchers
+    prices:
+    - price: 240000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: vouchers
+    tags: []
+    server: ''
+    slug: aov-1430-vouchers
+  - id: 36
+    name: 2390 Vouchers
+    name_ru: 2390 ваучеров
+    name_en: 2390 Vouchers
+    prices:
+    - price: 400000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: vouchers
+    tags: []
+    server: ''
+    slug: aov-2390-vouchers
+  - id: 37
+    name: 4800 Vouchers
+    name_ru: 4800 ваучеров
+    name_en: 4800 Vouchers
+    prices:
+    - price: 800000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: vouchers
+    tags: []
+    server: ''
+    slug: aov-4800-vouchers

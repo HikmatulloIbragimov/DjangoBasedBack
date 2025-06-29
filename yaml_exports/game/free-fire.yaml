@@ -1,0 +1,193 @@
+game:
+  name: Free Fire
+  name_ru: Фри Фаер
+  name_en: Free Fire
+  slug: free-fire
+  image_path: https://cdn.moogold.com/2024/07/garena-free-fire.jpg
+  servers: []
+  inputs: null
+  categories:
+  - name: olmos
+    name_ru: алмаз
+    name_en: Diamond
+    description: Doimiy sotib olinadigan olmos.
+    description_ru: Постоянно покупаемые алмазы.
+    description_en: Regularly purchasable diamonds.
+    slug: diamond
+  - name: obuna
+    name_ru: подписка
+    name_en: Subscription
+    description: Oʻyinga doimiy obuna.
+    description_ru: Постоянная подписка на игру.
+    description_en: Recurring game subscription.
+    slug: subscription
+  merchandise:
+  - id: 46
+    name: WEEKLY LITE
+    name_ru: НЕДЕЛЬНЫЙ ЛАЙТ
+    name_en: WEEKLY LITE
+    prices:
+    - price: 8000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: ff-weekly-lite
+  - id: 47
+    name: 50 Diamonds
+    name_ru: 50 алмазов
+    name_en: 50 Diamonds
+    prices:
+    - price: 9000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ff-50-diamonds
+  - id: 48
+    name: 25 Diamonds
+    name_ru: 25 алмазов
+    name_en: 25 Diamonds
+    prices:
+    - price: 5000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ff-25-diamonds
+  - id: 49
+    name: 110 Diamonds
+    name_ru: 110 алмазов
+    name_en: 110 Diamonds
+    prices:
+    - price: 15000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ff-110-diamonds
+  - id: 50
+    name: 231 Diamonds
+    name_ru: 231 алмаз
+    name_en: 231 Diamonds
+    prices:
+    - price: 30000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ff-231-diamonds
+  - id: 51
+    name: 645 Diamonds
+    name_ru: 645 алмазов
+    name_en: 645 Diamonds
+    prices:
+    - price: 85000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ff-645-diamonds
+  - id: 52
+    name: 583 Diamonds
+    name_ru: 583 алмаза
+    name_en: 583 Diamonds
+    prices:
+    - price: 70000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ff-583-diamonds
+  - id: 53
+    name: 4450 Diamonds
+    name_ru: 4450 алмазов
+    name_en: 4450 Diamonds
+    prices:
+    - price: 570000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ff-4450-diamonds
+  - id: 54
+    name: 1188 Diamonds
+    name_ru: 1188 алмазов
+    name_en: 1188 Diamonds
+    prices:
+    - price: 135000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ff-1188-diamonds
+  - id: 55
+    name: 6900 Diamonds
+    name_ru: 6900 алмазов
+    name_en: 6900 Diamonds
+    prices:
+    - price: 850000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ff-6900-diamonds
+  - id: 56
+    name: Weekly Membership
+    name_ru: Недельное членство
+    name_en: Weekly Membership
+    prices:
+    - price: 30000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: ff-weekly-membership
+  - id: 57
+    name: 2420 Diamonds
+    name_ru: 2420 алмазов
+    name_en: 2420 Diamonds
+    prices:
+    - price: 285000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: diamond
+    tags: []
+    server: ''
+    slug: ff-2420-diamonds
+  - id: 58
+    name: Monthly Membership
+    name_ru: Месячное членство
+    name_en: Monthly Membership
+    prices:
+    - price: 135000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: ff-monthly-membership

@@ -1,0 +1,199 @@
+game:
+  name: HOK
+  name_ru: ХОК
+  name_en: HOK
+  slug: hok
+  image_path: https://cdn.moogold.com/2023/09/honor-of-kings.jpg
+  servers: []
+  inputs: null
+  categories:
+  - name: token
+    name_ru: токен
+    name_en: Token
+    description: Oʻyindagi maxsus tokenlar.
+    description_ru: Специальные токены в игре.
+    description_en: Special in-game tokens.
+    slug: token
+  merchandise:
+  - id: 59
+    name: 23 Tokens
+    name_ru: 23 токена
+    name_en: 23 Tokens
+    prices:
+    - price: 5500
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-23-tokens
+  - id: 60
+    name: 8 Tokens
+    name_ru: 8 токенов
+    name_en: 8 Tokens
+    prices:
+    - price: 2000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-8-tokens
+  - id: 61
+    name: Weekly Card Plus
+    name_ru: Недельная карта плюс
+    name_en: Weekly Card Plus
+    prices:
+    - price: 34000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: hok-weekly-card-plus
+  - id: 62
+    name: Weekly Card
+    name_ru: Недельная карта
+    name_en: Weekly Card
+    prices:
+    - price: 13000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: ''
+    slug: hok-weekly-card
+  - id: 63
+    name: 16 Tokens
+    name_ru: 16 токенов
+    name_en: 16 Tokens
+    prices:
+    - price: 4000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-16-tokens
+  - id: 64
+    name: 80 Tokens
+    name_ru: 80 токенов
+    name_en: 80 Tokens
+    prices:
+    - price: 13000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-80-tokens
+  - id: 65
+    name: 240 Tokens
+    name_ru: 240 токенов
+    name_en: 240 Tokens
+    prices:
+    - price: 34000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-240-tokens
+  - id: 66
+    name: 400 Tokens
+    name_ru: 400 токенов
+    name_en: 400 Tokens
+    prices:
+    - price: 58000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-400-tokens
+  - id: 67
+    name: 560 Tokens
+    name_ru: 560 токенов
+    name_en: 560 Tokens
+    prices:
+    - price: 78000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-560-tokens
+  - id: 68
+    name: 800 + 30 Tokens
+    name_ru: 800 + 30 токенов
+    name_en: 800 + 30 Tokens
+    prices:
+    - price: 115000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-800-30-tokens
+  - id: 69
+    name: 1200 + 45 Tokens
+    name_ru: 1200 + 45 токенов
+    name_en: 1200 + 45 Tokens
+    prices:
+    - price: 170000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-1200-45-tokens
+  - id: 70
+    name: 2400 + 108 Tokens
+    name_ru: 2400 + 108 токенов
+    name_en: 2400 + 108 Tokens
+    prices:
+    - price: 340000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-2400-108-tokens
+  - id: 71
+    name: 4000 + 180 Tokens
+    name_ru: 4000 + 180 токенов
+    name_en: 4000 + 180 Tokens
+    prices:
+    - price: 570000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-4000-180-tokens
+  - id: 72
+    name: 8000 + 360 Tokens
+    name_ru: 8000 + 360 токенов
+    name_en: 8000 + 360 Tokens
+    prices:
+    - price: 1150000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: token
+    tags: []
+    server: ''
+    slug: hok-8000-360-tokens

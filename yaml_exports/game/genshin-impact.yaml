@@ -1,0 +1,121 @@
+game:
+  name: Genshin Impact
+  name_ru: Геншин Импакт
+  name_en: Genshin Impact
+  slug: genshin-impact
+  image_path: https://cdn.moogold.com/2020/10/genshin-impact-logo-revised.jpg
+  servers: []
+  inputs: null
+  categories:
+  - name: kristall
+    name_ru: бриллиант
+    name_en: Crystal
+    description: Yana bir xil turdagi qimmatbaho valyuta.
+    description_ru: Ещё один тип ценной валюты.
+    description_en: Another premium-like currency.
+    slug: crystal
+  merchandise:
+  - id: 97
+    name: Genesis Crystals - all pack
+    name_ru: Кристаллы генезиса - все пакеты
+    name_en: Genesis Crystals - all pack
+    prices:
+    - price: 2200000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: crystal
+    tags: []
+    server: ''
+    slug: gi-genesis-crystals-all-pack
+  - id: 98
+    name: 60 Genesis Crystals
+    name_ru: 60 кристаллов генезиса
+    name_en: 60 Genesis Crystals
+    prices:
+    - price: 12000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: crystal
+    tags: []
+    server: ''
+    slug: gi-60-genesis-crystals
+  - id: 99
+    name: 300+30 Genesis Crystals
+    name_ru: 300+30 кристаллов генезиса
+    name_en: 300+30 Genesis Crystals
+    prices:
+    - price: 52000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: crystal
+    tags: []
+    server: ''
+    slug: gi-300-30-genesis-crystals
+  - id: 100
+    name: 980+110 Genesis Crystals
+    name_ru: 980+110 кристаллов генезиса
+    name_en: 980+110 Genesis Crystals
+    prices:
+    - price: 155000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: crystal
+    tags: []
+    server: ''
+    slug: gi-980-110-genesis-crystals
+  - id: 101
+    name: 1980+260 Genesis Crystals
+    name_ru: 1980+260 кристаллов генезиса
+    name_en: 1980+260 Genesis Crystals
+    prices:
+    - price: 330000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: crystal
+    tags: []
+    server: ''
+    slug: gi-1980-260-genesis-crystals
+  - id: 102
+    name: 3280+600 Genesis Crystals
+    name_ru: 3280+600 кристаллов генезиса
+    name_en: 3280+600 Genesis Crystals
+    prices:
+    - price: 520000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: crystal
+    tags: []
+    server: ''
+    slug: gi-3280-600-genesis-crystals
+  - id: 103
+    name: 6480+1600 Genesis Crystals
+    name_ru: 6480+1600 кристаллов генезиса
+    name_en: 6480+1600 Genesis Crystals
+    prices:
+    - price: 1000000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: crystal
+    tags: []
+    server: ''
+    slug: gi-6480-1600-genesis-crystals
+  - id: 104
+    name: Blessing of the Welkin Moon
+    name_ru: Благословение луны Велкин
+    name_en: Blessing of the Welkin Moon
+    prices:
+    - price: 52000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: subscription
+    tags: []
+    server: null
+    slug: gi-blessing-welkin-moon
