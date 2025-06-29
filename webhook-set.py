@@ -8,4 +8,4 @@ def set_webhook(token, webhook_url):
     response = requests.post(url, data=payload)
     return response.json()
 
-set_webhook("8190740090:AAEDSCuLIRCFZbPAaEZwP0JztjkG7V9M4eA", "https://tezkor.kodi.uz/webhook/")
+set_webhook("8190740090:AAEDSCuLIRCFZbPAaEZwP0JztjkG7V9M4eA", "https://djangobasedback-production.up.railway.app/webhook/")

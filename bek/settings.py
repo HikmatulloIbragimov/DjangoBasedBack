@@ -111,9 +111,9 @@ SECURE_SSL_REDIRECT = False
 
 SESSION_COOKIE_SECURE = True
 
-YAML_OUTPUT_DIR = '/var/www/tezkor-donat/static/config/'
 STATIC_URL = '/cdn/'
 STATIC_ROOT = '/var/www/tezkor-donat/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+YAML_OUTPUT_DIR = os.path.join(BASE_DIR, 'yaml_exports')

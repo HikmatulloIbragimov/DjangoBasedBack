@@ -11,12 +11,19 @@ import os
 from django.conf import settings
 from .tg_util import send_telegram_photo
 
-def get_app_yaml(request):
-    file_path = os.path.join("cdn", "config", "app.yaml")
-    if not os.path.exists(file_path):
-        raise Http404("app.yaml не найден")
+def get_game_yaml(request, filename):
+    yaml_path = os.path.join(settings.YAML_OUTPUT_DIR, 'game', f'{filename}.yaml')
+    if not os.path.exists(yaml_path):
+        raise Http404("YAML файл не найден")
+    
+    return FileResponse(open(yaml_path, 'rb'), content_type="text/yaml")
 
-    return FileResponse(open(file_path, "rb"), content_type="text/yaml")
+def get_app_yaml(request):
+    yaml_path = os.path.join(settings.YAML_OUTPUT_DIR, 'app.yaml')
+    if not os.path.exists(yaml_path):
+        raise Http404("app.yaml не найден")
+    
+    return FileResponse(open(yaml_path, 'rb'), content_type="text/yaml")
 
 def get_user(request):
     encoded_user = request.headers.get("X-User-ID")
