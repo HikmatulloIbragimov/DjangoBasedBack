@@ -15,4 +15,4 @@ urlpatterns = [
     path('buy/', CreateTransactionApi.as_view()),
     path("cdn/config/app.yaml", get_app_yaml),
     path("cdn/config/game/<str:filename>.yaml", get_game_yaml),
-] + static("/cdn/config/", document_root=os.path.join(settings.BASE_DIR, "static/config"))
+]
