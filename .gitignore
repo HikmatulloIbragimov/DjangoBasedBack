@@ -5,3 +5,4 @@ yaml_exports/*
 db.slite3
 db.sqbpro
 dump.rdb
+.env.env
