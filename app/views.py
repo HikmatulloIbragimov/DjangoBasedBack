@@ -11,12 +11,13 @@ import os
 from django.conf import settings
 from .tg_util import send_telegram_photo
 
-def get_game_yaml(request, filename):
-    yaml_path = os.path.join(settings.YAML_OUTPUT_DIR, 'game', f'{filename}.yaml')
+def get_app_yaml(request):
+    yaml_path = os.path.join(settings.YAML_OUTPUT_DIR, 'app.yaml')
+    print(f"Serving app.yaml from: {yaml_path}, exists: {os.path.exists(yaml_path)}")
     if not os.path.exists(yaml_path):
-        raise Http404("YAML файл не найден")
-    
+        raise Http404("app.yaml не найден")
     return FileResponse(open(yaml_path, 'rb'), content_type="text/yaml")
+
 
 def get_app_yaml(request):
     yaml_path = os.path.join(settings.YAML_OUTPUT_DIR, 'app.yaml')
