@@ -6,17 +6,21 @@ from django.utils.decorators import method_decorator
 import threading
 import json
 import base64
-from django.http import FileResponse, Http404
 import os
 from django.conf import settings
 from .tg_util import send_telegram_photo
-
+from django.http import FileResponse, Http404, HttpResponse
 def get_app_yaml(request):
     yaml_path = os.path.join(settings.YAML_OUTPUT_DIR, 'app.yaml')
-    print(f"Serving app.yaml from: {yaml_path}, exists: {os.path.exists(yaml_path)}")
     if not os.path.exists(yaml_path):
         raise Http404("app.yaml не найден")
-    return FileResponse(open(yaml_path, 'rb'), content_type="text/yaml")
+    
+    with open(yaml_path, 'rb') as f:
+        content = f.read()
+
+    response = HttpResponse(content, content_type='text/yaml; charset=utf-8')
+    response['Content-Disposition'] = 'inline; filename="app.yaml"'
+    return response
 
 def get_game_yaml(request, filename):
     yaml_path = os.path.join(settings.YAML_OUTPUT_DIR, 'game', f'{filename}.yaml')
