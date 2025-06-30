@@ -15,3 +15,8 @@ dump.rdb
 # Файлы env
 .env
 .env.env
+
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc

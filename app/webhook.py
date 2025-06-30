@@ -172,7 +172,7 @@ def send_inline_image_with_buttons(token, chat_id):
             "inline_keyboard": [
                 [{
                     "text": "🚀 Start bot",
-                    "web_app": {"url": "https://tezkor-donat-front.vercel.app/"}
+                    "web_app": {"url": "https://my-repo-front3.vercel.app/"}
                 }],
                 [
                     {"text": "📞 Admin", "callback_data": "contact"},
