@@ -24,6 +24,15 @@ def telegram_webhook(request):
     chat_id = (message["chat"]["id"] if message else callback["message"]["chat"]["id"])
     
     if message:
+        user_data = message["from"]
+        TelegramUser.objects.get_or_create(
+            user_id=str(user_data["id"]),
+            defaults={
+                "first_name": user_data.get("first_name"),
+                "username": user_data.get("username"),
+                "photo_url": user_data.get("photo_url")
+            }
+        )
         if "reply_to_message" in message:
             replied_msg = message["reply_to_message"]
             

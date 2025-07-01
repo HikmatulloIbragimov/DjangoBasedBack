@@ -1,5 +1,5 @@
 import time, json, requests
-
+from django.conf import settings
 def send_transaction_done(bot_token, transaction):
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
 
@@ -46,8 +46,8 @@ class User:
         self.user_id = user_id
 
 
-user = User(8146970004)
+user = User(settings.TELEGRAM_ADMIN_ID)
 transaction = transaction("1", user, "delivered")
 
 
-send_transaction_done("7802336299:AAGHsBd0NvG8wlHcStIaanudxP2jKkYOuXY", transaction)
+send_transaction_done(settings.TELEGRAM_BOT_TOKEN, transaction)
