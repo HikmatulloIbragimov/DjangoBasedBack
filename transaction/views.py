@@ -11,13 +11,13 @@ import base64
 def get_user(request):
     encoded_user = request.headers.get("X-User-ID")
     if not encoded_user:
-        return JsonResponse({"error": "Missing user header"}, status=400)
+        return None
 
     try:
         decoded_str = base64.b64decode(encoded_user).decode("utf-8")
         return json.loads(decoded_str)
     except Exception:
-        return JsonResponse({"error": "Invalid user data"}, status=400)
+        return None
 
 
 class CreateTransactionApi(View):
