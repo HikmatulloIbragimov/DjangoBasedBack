@@ -3,10 +3,9 @@ from django.http import JsonResponse
 from app.models import TelegramUser, Merchandise
 from .models import Transaction
 from django.db.models import F
-
+from .tasks import make_moogold_order
 import json
 import base64
-from .tasks import make_moogold_order
 
 
 def get_user(request):
@@ -24,18 +23,16 @@ def get_user(request):
 class CreateTransactionApi(View):
     def get(self, request):
         try:
-            # Получаем inputs и пользователя
             inputs_raw = request.GET.get("inputs")
             user_data = get_user(request)
 
-            # Проверка наличия
             if not inputs_raw or not isinstance(user_data, dict):
                 return JsonResponse({
                     "success": False,
                     "message": "O'yinchi ma'lumotlaringizni kiriting"
                 }, status=400)
 
-            # Получаем корзину (все query-параметры кроме "inputs")
+            # Получаем cart из query-параметров (все, кроме 'inputs')
             cart = [
                 {"slug": key, "qty": int(value)}
                 for key, value in request.GET.items()
@@ -48,7 +45,7 @@ class CreateTransactionApi(View):
                     "message": "Savat bo'sh"
                 }, status=400)
 
-            # Разбор inputs
+            # Обработка inputs
             try:
                 inputs = [
                     {k: v} for k, v in (item.split(":") for item in inputs_raw.split(","))
@@ -59,7 +56,7 @@ class CreateTransactionApi(View):
                     "message": "Inputs noto‘g‘ri formatda"
                 }, status=400)
 
-            # Получаем пользователя из БД
+            # Получаем пользователя
             user = TelegramUser.objects.get(user_id=user_data.get("id"))
 
             total_amount = 0
@@ -87,7 +84,6 @@ class CreateTransactionApi(View):
                     "amount": amount
                 })
 
-            # Проверка баланса
             if user.balance < total_amount:
                 return JsonResponse({
                     "success": False,
@@ -108,7 +104,7 @@ class CreateTransactionApi(View):
                 make_moogold_order.delay(transaction.id)
                 created_transactions.append(transaction)
 
-            # Списываем баланс
+            # Обновляем баланс
             user.balance = F("balance") - total_amount
             user.save()
 
