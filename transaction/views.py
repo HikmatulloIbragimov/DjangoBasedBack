@@ -122,8 +122,8 @@ class CreateTransactionApi(View):
             }, status=404)
 
         except Exception as e:
-            print(f"Transaction error: {str(e)}")
+            import traceback
             return JsonResponse({
                 "success": False,
-                "message": "Qandaydir xatolik yuz berdi, qaytadan urinib ko'ring"
+                "message": traceback.format_exc()
             }, status=500)
