@@ -23,6 +23,7 @@ def get_user(request):
 class CreateTransactionApi(View):
     def get(self, request):
         try:
+            # Получаем inputs и пользователя
             inputs_raw = request.GET.get("inputs")
             user_data = get_user(request)
 
@@ -32,21 +33,25 @@ class CreateTransactionApi(View):
                     "message": "O'yinchi ma'lumotlaringizni kiriting"
                 }, status=400)
 
-            # Получаем cart из query-параметров (все, кроме 'inputs')
-            cart_raw = request.GET.get("cart")
-            if not cart_raw:
+            # Собираем cart из всех query параметров, кроме 'inputs'
+            try:
+                cart = [
+                    {"slug": key, "qty": int(value)}
+                    for key, value in request.GET.items()
+                    if key != "inputs"
+                ]
+            except ValueError:
+                return JsonResponse({
+                    "success": False,
+                    "message": "Cart noto‘g‘ri formatda"
+                }, status=400)
+
+            if not cart:
                 return JsonResponse({
                     "success": False,
                     "message": "Savat bo‘sh"
                 }, status=400)
 
-            try:
-                cart = [{"slug": k, "qty": int(v)} for k, v in (item.split(":") for item in cart_raw.split(","))]
-            except Exception:
-                return JsonResponse({
-                    "success": False,
-                    "message": "Cart noto‘g‘ri formatda"
-                }, status=400)
             # Обработка inputs
             try:
                 inputs = [
@@ -69,7 +74,7 @@ class CreateTransactionApi(View):
                 qty = item["qty"]
 
                 try:
-                    merchandise = Merchandise.objects.get(id=int(slug), enabled=True)
+                    merchandise = Merchandise.objects.get(slug=slug, enabled=True)
                 except Merchandise.DoesNotExist:
                     return JsonResponse({
                         "success": False,
@@ -122,7 +127,7 @@ class CreateTransactionApi(View):
                 "success": False,
                 "message": "User not found"
             }, status=404)
-        #test
+
         except Exception as e:
             import traceback
             return JsonResponse({
