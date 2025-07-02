@@ -11,122 +11,123 @@ from .tasks import make_moogold_order
 
 def get_user(request):
     encoded_user = request.headers.get("X-User-ID")
-    user_data = None
-
     if not encoded_user:
         return JsonResponse({"error": "Missing user header"}, status=400)
 
     try:
         decoded_str = base64.b64decode(encoded_user).decode("utf-8")
-
-        user_data = json.loads(decoded_str)
-    except Exception as e:
+        return json.loads(decoded_str)
+    except Exception:
         return JsonResponse({"error": "Invalid user data"}, status=400)
-
-    return user_data
 
 
 class CreateTransactionApi(View):
     def get(self, request):
         try:
-            # Get parameters from request
-            inputsRaw = request.GET.get("inputs")
-            cartRaw = request.GET.get("cart")
-            userJson = get_user(request)
-            
-            
-            if not all([inputsRaw, cartRaw, userJson]):
+            # Получаем inputs и пользователя
+            inputs_raw = request.GET.get("inputs")
+            user_data = get_user(request)
+
+            # Проверка наличия
+            if not inputs_raw or not isinstance(user_data, dict):
                 return JsonResponse({
-                    'success': False,
-                    'message': 'O\'yinchi ma\'lumotlaringizni kiriting'
+                    "success": False,
+                    "message": "O'yinchi ma'lumotlaringizni kiriting"
                 }, status=400)
-            
-            # Parse inputs and cart
-            inputs = [{k: v} for k, v in (item.split(":") for item in inputsRaw.split(","))]
-            cart = [{"slug": k, "qty": v} for k, v in (item.split(":") for item in cartRaw.split(","))]
-            
-            print(f"Inputs: {inputs}")
-            print(f"Cart: {cart}")
-            print(f"User: {userJson}")
-            
-            
-            user = TelegramUser.objects.get(user_id=userJson.get("id"))
-            
+
+            # Получаем корзину (все query-параметры кроме "inputs")
+            cart = [
+                {"slug": key, "qty": int(value)}
+                for key, value in request.GET.items()
+                if key != "inputs"
+            ]
+
+            if not cart:
+                return JsonResponse({
+                    "success": False,
+                    "message": "Savat bo'sh"
+                }, status=400)
+
+            # Разбор inputs
+            try:
+                inputs = [
+                    {k: v} for k, v in (item.split(":") for item in inputs_raw.split(","))
+                ]
+            except ValueError:
+                return JsonResponse({
+                    "success": False,
+                    "message": "Inputs noto‘g‘ri formatda"
+                }, status=400)
+
+            # Получаем пользователя из БД
+            user = TelegramUser.objects.get(user_id=user_data.get("id"))
+
             total_amount = 0
             transaction_items = []
-            
-            for cart_item in cart:
-                merchandise_slug = cart_item.get('slug')
-                quantity = int(cart_item.get('qty', 1))
-                
+
+            for item in cart:
+                slug = item["slug"]
+                qty = item["qty"]
+
                 try:
-                    merchandise = Merchandise.objects.get(
-                        slug=merchandise_slug,
-                        enabled=True
-                    )
+                    merchandise = Merchandise.objects.get(slug=slug, enabled=True)
                 except Merchandise.DoesNotExist:
                     return JsonResponse({
-                        'success': False,
-                        'message': f'Bu mahsulot #{merchandise_slug} topilmadi'
+                        "success": False,
+                        "message": f"Bu mahsulot #{slug} topilmadi"
                     }, status=400)
-                
-                
-                item_price = int(merchandise.price)
-                item_total = item_price * quantity
-                total_amount += item_total
-                
+
+                price = int(merchandise.price)
+                amount = price * qty
+                total_amount += amount
+
                 transaction_items.append({
-                    'merchandise': merchandise,
-                    'quantity': quantity,
-                    'amount': item_total
+                    "merchandise": merchandise,
+                    "quantity": qty,
+                    "amount": amount
                 })
-            
+
+            # Проверка баланса
             if user.balance < total_amount:
                 return JsonResponse({
-                    'success': False,
-                    'message': 'Hisobingizda mablag\' yetarli emas!'
+                    "success": False,
+                    "message": "Hisobingizda mablag' yetarli emas!"
                 }, status=400)
-            
+
+            # Создание транзакций
             created_transactions = []
-            
             for item in transaction_items:
-                new_transaction = Transaction.objects.create(
+                transaction = Transaction.objects.create(
                     user=user,
-                    merchandise=item['merchandise'],
-                    quantity=item['quantity'],
+                    merchandise=item["merchandise"],
+                    quantity=item["quantity"],
                     inputs=inputs,
-                    amount=item['amount'],
+                    amount=item["amount"],
                     is_accepted=True
                 )
+                make_moogold_order.delay(transaction.id)
+                created_transactions.append(transaction)
 
-                make_moogold_order.delay(new_transaction.id)
-                created_transactions.append(new_transaction)
-                
-            user.balance = F('balance') - total_amount
+            # Списываем баланс
+            user.balance = F("balance") - total_amount
             user.save()
-            
+
             return JsonResponse({
-                'success': True,
-                'message': '✅ Buyurtmangiz muvaffaqiyatli qabul qilindi!',
-                'transaction_ids': [t.id for t in created_transactions],
-                'total_amount': str(total_amount)
+                "success": True,
+                "message": "✅ Buyurtmangiz muvaffaqiyatli qabul qilindi!",
+                "transaction_ids": [t.id for t in created_transactions],
+                "total_amount": str(total_amount)
             })
-            
+
         except TelegramUser.DoesNotExist:
             return JsonResponse({
-                'success': False,
-                'message': 'User not found'
+                "success": False,
+                "message": "User not found"
             }, status=404)
-            
-        except ValueError as e:
-            return JsonResponse({
-                'success': False,
-                'message': f'Invalid data format: {str(e)}'
-            }, status=400)
-            
+
         except Exception as e:
             print(f"Transaction error: {str(e)}")
             return JsonResponse({
-                'success': False,
-                'message': 'Qandaydir xatolik yuz berdi, qaytadan urinib ko\'ring'
+                "success": False,
+                "message": "Qandaydir xatolik yuz berdi, qaytadan urinib ko'ring"
             }, status=500)
