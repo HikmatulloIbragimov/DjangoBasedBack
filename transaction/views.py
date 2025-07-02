@@ -38,19 +38,12 @@ class CreateTransactionApi(View):
                 if key == "inputs":
                     continue
                 try:
-                    _id, qty = value.split(":")
-                    cart.append({"slug": key, "qty": int(qty)})
+                    cart.append({"slug": key, "qty": int(value)})
                 except ValueError:
                     return JsonResponse({
                         "success": False,
                         "message": f"Cartdagi element noto‘g‘ri formatda: {key}={value}"
                     }, status=400)
-
-            if not cart:
-                return JsonResponse({
-                    "success": False,
-                    "message": "Savat bo'sh"
-                }, status=400)
 
             # Обработка inputs
             try:
