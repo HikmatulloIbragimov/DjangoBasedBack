@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_celery_results'
 ]
+CSRF_TRUSTED_ORIGINS = [
+    "https://djangobasedback-production.up.railway.app",
+]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
