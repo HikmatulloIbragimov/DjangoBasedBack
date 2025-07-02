@@ -69,7 +69,7 @@ class CreateTransactionApi(View):
                 qty = item["qty"]
 
                 try:
-                    merchandise = Merchandise.objects.get(slug=slug, enabled=True)
+                    merchandise = Merchandise.objects.get(id=int(slug), enabled=True)
                 except Merchandise.DoesNotExist:
                     return JsonResponse({
                         "success": False,
