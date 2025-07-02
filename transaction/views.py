@@ -33,18 +33,20 @@ class CreateTransactionApi(View):
                 }, status=400)
 
             # Получаем cart из query-параметров (все, кроме 'inputs')
-            cart = []
-            for key, value in request.GET.items():
-                if key == "inputs":
-                    continue
-                try:
-                    cart.append({"slug": key, "qty": int(value)})
-                except ValueError:
-                    return JsonResponse({
-                        "success": False,
-                        "message": f"Cartdagi element noto‘g‘ri formatda: {key}={value}"
-                    }, status=400)
+            cart_raw = request.GET.get("cart")
+            if not cart_raw:
+                return JsonResponse({
+                    "success": False,
+                    "message": "Savat bo‘sh"
+                }, status=400)
 
+            try:
+                cart = [{"slug": k, "qty": int(v)} for k, v in (item.split(":") for item in cart_raw.split(","))]
+            except Exception:
+                return JsonResponse({
+                    "success": False,
+                    "message": "Cart noto‘g‘ri formatda"
+                }, status=400)
             # Обработка inputs
             try:
                 inputs = [
