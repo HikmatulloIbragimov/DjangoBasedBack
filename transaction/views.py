@@ -43,7 +43,7 @@ class CreateTransactionApi(View):
             
             # Parse inputs and cart
             inputs = [{k: v} for k, v in (item.split(":") for item in inputsRaw.split(","))]
-            cart = [{"id": k, "qty": v} for k, v in (item.split(":") for item in cartRaw.split(","))]
+            cart = [{"slug": k, "qty": v} for k, v in (item.split(":") for item in cartRaw.split(","))]
             
             print(f"Inputs: {inputs}")
             print(f"Cart: {cart}")
@@ -56,18 +56,18 @@ class CreateTransactionApi(View):
             transaction_items = []
             
             for cart_item in cart:
-                merchandise_id = cart_item.get('id')
+                merchandise_slug = cart_item.get('slug')
                 quantity = int(cart_item.get('qty', 1))
                 
                 try:
                     merchandise = Merchandise.objects.get(
-                        id=merchandise_id,
+                        slug=merchandise_slug,
                         enabled=True
                     )
                 except Merchandise.DoesNotExist:
                     return JsonResponse({
                         'success': False,
-                        'message': f'Bu mahsulot #{merchandise_id} topilmadi'
+                        'message': f'Bu mahsulot #{merchandise_slug} topilmadi'
                     }, status=400)
                 
                 
