@@ -61,6 +61,8 @@ class YAMLGenerator:
     
     def generate_game_yaml(self, game_slug):
         """Generate individual game YAML file"""
+        print("[DEBUG] Generating merch for:", game_slug)
+        print("[DEBUG] Found:", Merchandise.objects.filter(game=game_slug, enabled=True).count())
         try:
             game = Game.objects.get(slug=game_slug)
             
@@ -90,30 +92,27 @@ class YAMLGenerator:
             # Get merchandise for this game
             merchandise_data = []
             for merch in Merchandise.objects.filter(game=game_slug, enabled=True):
-                # Parse tags (assuming they're stored as comma-separated string)
                 tags_list = []
                 if merch.tags:
                     tag_names = merch.tags.split(',')
-                    for tag_name in tag_names:
-                        tags_list.append({'name': tag_name.strip()})
-                
-                # Parse prices (for now single price, but structure for multiple)
+                    tags_list = [{'name': tag.strip()} for tag in tag_names]
+
                 prices_list = [{
                     'price': int(merch.price) if merch.price.isdigit() else merch.price,
                     'currency': merch.currency,
                     'currency_ru': merch.currency_ru,
                     'currency_en': merch.currency_en
                 }]
-                
+
                 merchandise_data.append({
                     'id': merch.id,
                     'name': merch.name,
                     'name_ru': merch.name_ru,
                     'name_en': merch.name_en,
                     'prices': prices_list,
-                    'category': merch.category,
+                    'category': merch.category or '',
                     'tags': tags_list,
-                    'server': merch.server,
+                    'server': merch.server or '',
                     'slug': merch.slug
                 })
             
