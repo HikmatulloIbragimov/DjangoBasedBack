@@ -88,6 +88,7 @@ class CreateTransactionApi(View):
                         "message": f"Bu mahsulot #{slug} topilmadi"
                     }, status=400)
 
+
                 price = int(merchandise.price)
                 amount = price * qty
                 total_amount += amount
