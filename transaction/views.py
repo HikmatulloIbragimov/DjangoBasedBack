@@ -87,7 +87,11 @@ class CreateTransactionApi(View):
                         "success": False,
                         "message": f"Bu mahsulot #{slug} topilmadi"
                     }, status=400)
-
+                if not merchandise.server:
+                    return JsonResponse({
+                        "success": False,
+                        "message": f"Mahsulot #{slug} uchun server tanlanmagan"
+                    }, status=400)
 
                 price = int(merchandise.price)
                 amount = price * qty
