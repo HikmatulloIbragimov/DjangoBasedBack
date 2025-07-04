@@ -80,13 +80,13 @@ class CreateTransactionApi(View):
                 slug = item["slug"].strip().lower()
                 qty = item["qty"]
 
-                try:
-                    merchandise = Merchandise.objects.get(slug=slug, enabled=True)
-                except Merchandise.DoesNotExist:
+                merchandise = Merchandise.objects.filter(slug=slug, enabled=True).first()
+                if not merchandise:
                     return JsonResponse({
                         "success": False,
                         "message": f"Bu mahsulot #{slug} topilmadi"
                     }, status=400)
+
                 if not merchandise.server:
                     return JsonResponse({
                         "success": False,
