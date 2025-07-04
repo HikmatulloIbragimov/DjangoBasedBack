@@ -84,9 +84,11 @@ class CreateTransactionApi(View):
                 if not merchandise:
                     return JsonResponse({
                         "success": False,
-                        "message": f"Bu mahsulot #{slug} topilmadi"
+                        "message": (
+                            f"Bu mahsulot #{slug} topilmadi\n"
+                            f"(Raw: {item['slug']}, Normalized: {slug})"
+                        )
                     }, status=400)
-
                 if not merchandise.server:
                     return JsonResponse({
                         "success": False,
