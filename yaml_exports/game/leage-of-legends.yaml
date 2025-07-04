@@ -7,44 +7,90 @@ game:
   servers: []
   inputs: null
   categories:
-  - name: obuna
-    name_ru: подписка
-    name_en: Subscription
-    description: Oʻyinga doimiy obuna.
-    description_ru: Постоянная подписка на игру.
-    description_en: Recurring game subscription.
-    slug: subscription
-  - name: bond
-    name_ru: облигация
-    name_en: Bond
-    description: Alohida valyuta turi (masalan, HOK uchun).
-    description_ru: Отдельный тип валюты (например, для HOK).
-    description_en: Special currency type (e.g. for HOK).
-    slug: bond
+  - name: Birliklar
+    name_ru: Основная валюта
+    name_en: Cores
+    description: Birlik (Wild Core) — bu Wild Rift o‘yinidagi premium valyuta.
+    description_ru: Wild Core — это премиальная валюта в игре Wild Rift.
+    description_en: 'Wild Core is the premium currency in League of Legends: Wild
+      Rift.'
+    slug: wild-core
   merchandise:
-  - id: 12
-    name: 6500 + 320 Bonds
-    name_ru: 6500 + 320 облигаций
-    name_en: 6500 + 320 Bonds
+  - id: 24
+    name: 425 cores
+    name_ru: 425 ядер
+    name_en: 425 cores
     prices:
-    - price: 1150000
-      currency: ''
-      currency_ru: ''
-      currency_en: ''
-    category: subscription
+    - price: 48000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
     tags: []
     server: ''
-    slug: ab-6500-320-bonds
-  - id: 11
-    name: 3200 + 200 Bonds
-    name_ru: 3200 + 200 облигаций
-    name_en: 3200 + 200 Bonds
+    slug: lol-425-cores
+  - id: 25
+    name: 1000 cores
+    name_ru: 1000 ядер
+    name_en: 1000 cores
     prices:
-    - price: 590000
-      currency: ''
-      currency_ru: ''
-      currency_en: ''
-    category: bond
+    - price: 105000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
     tags: []
     server: ''
-    slug: ab-3200-200-bonds
+    slug: lol-1000-cores
+  - id: 26
+    name: 1850 cores
+    name_ru: 1850 ядер
+    name_en: 1850 cores
+    prices:
+    - price: 190000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
+    tags: []
+    server: ''
+    slug: lol-1850-cores
+  - id: 27
+    name: 3275 cores
+    name_ru: 3275 ядер
+    name_en: 3275 cores
+    prices:
+    - price: 330000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
+    tags: []
+    server: ''
+    slug: lol-3275-cores
+  - id: 28
+    name: 4800 cores
+    name_ru: 4800 ядер
+    name_en: 4800 cores
+    prices:
+    - price: 470000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
+    tags: []
+    server: ''
+    slug: lol-4800-cores
+  - id: 29
+    name: 10000 cores
+    name_ru: 10000 ядер
+    name_en: 10000 cores
+    prices:
+    - price: 950000
+      currency: so'm
+      currency_ru: сум
+      currency_en: som
+    category: wild-core
+    tags: []
+    server: ''
+    slug: lol-10000-cores

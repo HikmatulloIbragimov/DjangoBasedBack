@@ -7,47 +7,11 @@ game:
   servers: []
   inputs: null
   categories:
-  - name: obuna
-    name_ru: подписка
-    name_en: Subscription
-    description: Oʻyinga doimiy obuna.
-    description_ru: Постоянная подписка на игру.
-    description_en: Recurring game subscription.
-    slug: subscription
-  - name: bond
-    name_ru: облигация
-    name_en: Bond
-    description: Alohida valyuta turi (masalan, HOK uchun).
-    description_ru: Отдельный тип валюты (например, для HOK).
-    description_en: Special currency type (e.g. for HOK).
-    slug: bond
-  merchandise:
-  - id: 41
-    name: ''
-    name_ru: ''
-    name_en: ''
-    prices:
-    - price: ''
-      currency: ''
-      currency_ru: ''
-      currency_en: ''
-    category: ''
-    tags: []
-    server: ''
-    slug: ''
-  - id: 10
-    name: 1580 + 110 Bonds
-    name_ru: 1580 + 110 облигаций
-    name_en: 1580 + 110 Bonds
-    prices:
-    - price: 310000
-      currency: ''
-      currency_ru: ''
-      currency_en: ''
-    category: subscription
-    tags: []
-    server: ''
-    slug: ab-1580-110-bonds
-
-
-
+  - name: USD
+    name_ru: USD
+    name_en: USD
+    description: AQSH dollarida qiymat.
+    description_ru: Стоимость в долларах США.
+    description_en: Value in USD.
+    slug: usd
+  merchandise: []

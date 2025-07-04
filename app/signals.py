@@ -3,27 +3,30 @@ from django.dispatch import receiver
 from django.conf import settings
 import yaml
 import os
+import threading
 from .models import Game, Server, Category, Merchandise, Card
 
+# 🔒 Флаг для временного отключения сигналов
+block_yaml_signals = threading.local()
+block_yaml_signals.disabled = False
 
 
 class NoAliasDumper(yaml.SafeDumper):
     def ignore_aliases(self, data):
         return True
+
+
 class YAMLGenerator:
     def __init__(self):
         self.yaml_dir = getattr(settings, 'YAML_OUTPUT_DIR', 'yaml_exports')
         self.ensure_directory_exists()
     
     def ensure_directory_exists(self):
-        """Create YAML output directory if it doesn't exist"""
         if not os.path.exists(self.yaml_dir):
             os.makedirs(self.yaml_dir)
     
     def generate_app_yaml(self):
-        """Generate the main app.yaml file with games and cards"""
         try:
-            # Get all games
             games_data = []
             for game in Game.objects.all():
                 games_data.append({
@@ -33,40 +36,33 @@ class YAMLGenerator:
                     'slug': game.slug,
                     'image_path': game.image_path
                 })
-            
-            # Get all cards
+
             cards_data = []
             for card in Card.objects.all():
                 cards_data.append({
                     'number': card.number,
                     'cardholder_name': card.cardholder_name
                 })
-            
-            # Create the main structure
+
             app_data = {
                 'games': games_data,
                 'cards': cards_data
             }
-            # Write to app.yaml
+
             app_yaml_path = os.path.join(self.yaml_dir, 'app.yaml')
             with open(app_yaml_path, 'w', encoding='utf-8') as file:
                 yaml.dump(app_data, file, Dumper=NoAliasDumper, allow_unicode=True, default_flow_style=False, sort_keys=False)
 
-
-            
             print(f"Generated app.yaml at {app_yaml_path}")
-            
         except Exception as e:
             print(f"Error generating app.yaml: {e}")
     
     def generate_game_yaml(self, game_slug):
-        """Generate individual game YAML file"""
         print("[DEBUG] Generating merch for:", game_slug)
         print("[DEBUG] Found:", Merchandise.objects.filter(game=game_slug, enabled=True).count())
         try:
             game = Game.objects.get(slug=game_slug)
-            
-            # Get servers for this game
+
             servers_data = []
             for server in game.servers.all():
                 servers_data.append({
@@ -75,8 +71,7 @@ class YAMLGenerator:
                     'name_en': server.name_en,
                     'slug': server.slug
                 })
-            
-            # Get categories for this game
+
             categories_data = []
             for category in game.categories.all():
                 categories_data.append({
@@ -88,8 +83,7 @@ class YAMLGenerator:
                     'description_en': category.description_en,
                     'slug': category.slug
                 })
-            
-            # Get merchandise for this game
+
             merchandise_data = []
             for merch in Merchandise.objects.filter(game=game_slug, enabled=True):
                 tags_list = []
@@ -98,7 +92,7 @@ class YAMLGenerator:
                     tags_list = [{'name': tag.strip()} for tag in tag_names]
 
                 prices_list = [{
-                    'price': int(merch.price) if merch.price.isdigit() else merch.price,
+                    'price': int(merch.price) if str(merch.price).isdigit() else merch.price,
                     'currency': merch.currency,
                     'currency_ru': merch.currency_ru,
                     'currency_en': merch.currency_en
@@ -115,8 +109,7 @@ class YAMLGenerator:
                     'server': merch.server or '',
                     'slug': merch.slug
                 })
-            
-            # Create game structure
+
             game_data = {
                 'game': {
                     'name': game.name,
@@ -130,60 +123,69 @@ class YAMLGenerator:
                     'merchandise': merchandise_data
                 }
             }
-            
+
             os.makedirs(os.path.join(self.yaml_dir, 'game'), exist_ok=True)
             game_yaml_path = os.path.join(self.yaml_dir, f'game/{game_slug}.yaml')
             with open(game_yaml_path, 'w+', encoding='utf-8') as file:
                 yaml.dump(game_data, file, Dumper=NoAliasDumper, allow_unicode=True, default_flow_style=False, sort_keys=False)
 
-            
             print(f"Generated {game_slug}.yaml at {game_yaml_path}")
-            
         except Game.DoesNotExist:
             print(f"Game with slug '{game_slug}' not found")
         except Exception as e:
             print(f"Error generating {game_slug}.yaml: {e}")
     
     def generate_all_game_yamls(self):
-        """Generate YAML files for all games"""
         for game in Game.objects.all():
             self.generate_game_yaml(game.slug)
 
-# Initialize the generator
+
+# Инициализация генератора
 yaml_generator = YAMLGenerator()
 
-# Signal handlers
+
+# ========== СИГНАЛЫ ==========
+def skip_if_disabled(func):
+    def wrapper(sender, instance, **kwargs):
+        if getattr(block_yaml_signals, 'disabled', False):
+            return
+        return func(sender, instance, **kwargs)
+    return wrapper
+
+
 @receiver(post_save, sender=Game)
 @receiver(post_delete, sender=Game)
+@skip_if_disabled
 def handle_game_change(sender, instance, **kwargs):
-    """Handle Game model changes"""
     yaml_generator.generate_app_yaml()
     if hasattr(instance, 'slug'):
         yaml_generator.generate_game_yaml(instance.slug)
 
+
 @receiver(post_save, sender=Card)
 @receiver(post_delete, sender=Card)
+@skip_if_disabled
 def handle_card_change(sender, instance, **kwargs):
-    """Handle Card model changes"""
     yaml_generator.generate_app_yaml()
+
 
 @receiver(post_save, sender=Server)
 @receiver(post_delete, sender=Server)
+@skip_if_disabled
 def handle_server_change(sender, instance, **kwargs):
-    """Handle Server model changes"""
-    # Regenerate all game YAMLs since servers are related to games
     yaml_generator.generate_all_game_yamls()
+
 
 @receiver(post_save, sender=Category)
 @receiver(post_delete, sender=Category)
+@skip_if_disabled
 def handle_category_change(sender, instance, **kwargs):
-    """Handle Category model changes"""
-    # Regenerate all game YAMLs since categories are related to games
     yaml_generator.generate_all_game_yamls()
+
 
 @receiver(post_save, sender=Merchandise)
 @receiver(post_delete, sender=Merchandise)
+@skip_if_disabled
 def handle_merchandise_change(sender, instance, **kwargs):
-    """Handle Merchandise model changes"""
     if hasattr(instance, 'game'):
         yaml_generator.generate_game_yaml(instance.game)
