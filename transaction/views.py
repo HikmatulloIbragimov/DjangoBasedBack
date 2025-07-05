@@ -89,11 +89,11 @@ class CreateTransactionApi(View):
                             f"(Raw: {item['slug']}, Normalized: {slug})"
                         )
                     }, status=400)
-                if not merchandise.server:
-                    return JsonResponse({
-                        "success": False,
-                        "message": f"Mahsulot #{slug} uchun server tanlanmagan"
-                    }, status=400)
+                # if not merchandise.server:
+                #     return JsonResponse({
+                #         "success": False,
+                #         "message": f"Mahsulot #{slug} uchun server tanlanmagan"
+                #     }, status=400)
 
                 price = int(merchandise.price)
                 amount = price * qty
