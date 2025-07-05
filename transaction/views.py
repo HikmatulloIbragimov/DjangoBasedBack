@@ -6,7 +6,8 @@ from django.db.models import F
 from .tasks import make_moogold_order
 import json
 import base64
-
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
 def get_user(request):
     encoded_user = (
@@ -23,7 +24,7 @@ def get_user(request):
     except Exception:
         return None
 
-
+@method_decorator(csrf_exempt, name='dispatch')
 class CreateTransactionApi(View):
     def post(self, request):
         try:
