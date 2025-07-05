@@ -30,7 +30,11 @@ class CreateTransactionApi(View):
             if not inputs_raw or not isinstance(user_data, dict):
                 return JsonResponse({
                     "success": False,
-                    "message": "O'yinchi ma'lumotlaringizni kiriting"
+                    "message": "O'yinchi ma'lumotlaringizni kiriting",
+                    "debug": {
+                        "inputs_raw": inputs_raw,
+                        "user_data": user_data
+                    }
                 }, status=400)
 
             # Собираем cart из всех query параметров, кроме 'inputs'
@@ -61,15 +65,20 @@ class CreateTransactionApi(View):
 
             # Обработка inputs
             try:
-                inputs = [
-                    {k: v} for k, v in (item.split(":") for item in inputs_raw.split(","))
-                ]
-            except ValueError:
+                inputs = []
+                for item in inputs_raw.split(","):
+                    if ":" not in item:
+                        return JsonResponse({
+                            "success": False,
+                            "message": f"Inputs noto‘g‘ri formatda: {item}"
+                        }, status=400)
+                    k, v = item.split(":", 1)
+                    inputs.append({k: v})
+            except Exception:
                 return JsonResponse({
                     "success": False,
-                    "message": "Inputs noto‘g‘ri formatda"
+                    "message": "Inputs noto‘g‘ri formatda (general)"
                 }, status=400)
-
             # Получаем пользователя
             user = TelegramUser.objects.get(user_id=user_data.get("id"))
 
