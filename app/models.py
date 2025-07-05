@@ -10,7 +10,7 @@ class TelegramUser(models.Model):
     balance = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.username or self.user_id
+        return self.username or str(self.user_id)
     
 
 class Card(models.Model):
