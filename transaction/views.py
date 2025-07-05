@@ -9,7 +9,11 @@ import base64
 
 
 def get_user(request):
-    encoded_user = request.headers.get("X-User-ID")
+    encoded_user = (
+        request.headers.get("X-User-ID") or
+        request.META.get("HTTP_X_USER_ID")  # fallback
+    )
+    print("DEBUG: encoded_user =", encoded_user)  # временно
     if not encoded_user:
         return None
 
