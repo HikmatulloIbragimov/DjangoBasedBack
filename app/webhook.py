@@ -119,13 +119,13 @@ def send_telegram_photo(bot_token, admin_id, amount, user_id, image):
         "photo": image
     }
 
+    logger.info(f"📸 FILE_ID being sent: {image}")  # добавь сюда
     try:
         response = requests.post(url, data=data)
         logger.info("🟢 Telegram response: " + response.text)
         response.raise_for_status()
     except Exception as e:
         logger.error(f"🔴 Telegram send error: {e}")
-
 
 def answer_callback_query(token, callback_query_id, text=None, show_alert=False):
     url = f"https://api.telegram.org/bot{token}/answerCallbackQuery"
