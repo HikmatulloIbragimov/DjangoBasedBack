@@ -69,12 +69,17 @@ class CreateTransactionApi(View):
             for item in cart:
                 slug = item.get("slug", "").strip().lower()
                 qty = int(item.get("qty", 1))
-
+                debug_info = {
+                    "received_slug": slug,
+                    "cart_item": item,
+                    "all_slugs_in_db": list(Merchandise.objects.values_list("slug", flat=True))
+                }
                 merchandise = Merchandise.objects.filter(slug=slug, enabled=True).first()
                 if not merchandise:
                     return JsonResponse({
                         "success": False,
-                        "message": f"Mahsulot topilmadi: {slug}"
+                        "message": f"Mahsulot topilmadi: {slug}",
+                        "debug": debug_info
                     }, status=400)
 
                 price = int(merchandise.price)
