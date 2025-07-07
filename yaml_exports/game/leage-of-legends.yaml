@@ -16,81 +16,29 @@ game:
       Rift.'
     slug: wild-core
   merchandise:
-  - id: 24
-    name: 425 cores
-    name_ru: 425 ядер
-    name_en: 425 cores
+  - id: 12
+    name: 6500 + 320 Bonds
+    name_ru: 6500 + 320 облигаций
+    name_en: 6500 + 320 Bonds
     prices:
-    - price: 48000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: wild-core
+    - price: 1150000
+      currency: ''
+      currency_ru: ''
+      currency_en: ''
+    category: subscription
     tags: []
     server: ''
-    slug: lol-425-cores
-  - id: 25
-    name: 1000 cores
-    name_ru: 1000 ядер
-    name_en: 1000 cores
+    slug: ab-6500-320-bonds
+  - id: 11
+    name: 3200 + 200 Bonds
+    name_ru: 3200 + 200 облигаций
+    name_en: 3200 + 200 Bonds
     prices:
-    - price: 105000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: wild-core
+    - price: 590000
+      currency: ''
+      currency_ru: ''
+      currency_en: ''
+    category: bond
     tags: []
     server: ''
-    slug: lol-1000-cores
-  - id: 26
-    name: 1850 cores
-    name_ru: 1850 ядер
-    name_en: 1850 cores
-    prices:
-    - price: 190000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: wild-core
-    tags: []
-    server: ''
-    slug: lol-1850-cores
-  - id: 27
-    name: 3275 cores
-    name_ru: 3275 ядер
-    name_en: 3275 cores
-    prices:
-    - price: 330000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: wild-core
-    tags: []
-    server: ''
-    slug: lol-3275-cores
-  - id: 28
-    name: 4800 cores
-    name_ru: 4800 ядер
-    name_en: 4800 cores
-    prices:
-    - price: 470000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: wild-core
-    tags: []
-    server: ''
-    slug: lol-4800-cores
-  - id: 29
-    name: 10000 cores
-    name_ru: 10000 ядер
-    name_en: 10000 cores
-    prices:
-    - price: 950000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: wild-core
-    tags: []
-    server: ''
-    slug: lol-10000-cores
+    slug: ab-3200-200-bonds

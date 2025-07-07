@@ -188,4 +188,4 @@ def handle_category_change(sender, instance, **kwargs):
 @skip_if_disabled
 def handle_merchandise_change(sender, instance, **kwargs):
     if hasattr(instance, 'game'):
-        yaml_generator.generate_game_yaml(instance.game)
+        yaml_generator.generate_game_yaml(instance.game.slug)

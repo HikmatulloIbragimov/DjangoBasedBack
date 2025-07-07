@@ -1,0 +1,3161 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$TnnpcNXSvr26BVMO2RUgFg$Ro/w52Q3yTpCDVaXhSmz+QCnH95gD3BcsghbaLnX8tA=",
+    "last_login": "2025-06-02T15:10:33.893Z",
+    "is_superuser": true,
+    "username": "abror",
+    "first_name": "",
+    "last_name": "",
+    "email": "abror@qodirov.uz",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-06-01T16:52:22.532Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "klg1lhhi49au6anp3k5ewh1cdrgi1pg8",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyFA6QIevfcbyMKCVA0kpT0Z_9026UGvM_Pem3nc1uK3nhY_E7syyS6_LGB8pnoIemC9Nx5bXZc58CPhp-18apRet7P9OyjYy762o4zZjlEpMmCMDlKiVWanglCYwYkoEjmlNSgCgowpWwfaDS5kCcg-X8RrN08:1uM6o5:5b3b2B7m-6J9OpK5aNUaX0z2LDJtSA2ONp86qB4VJQA",
+    "expire_date": "2025-06-16T15:10:33.896Z"
+  }
+},
+{
+  "model": "app.telegramuser",
+  "pk": 4,
+  "fields": {
+    "user_id": "8146970004",
+    "first_name": "Abror",
+    "username": "kachka_pachka",
+    "photo_url": "https://t.me/i/userpic/320/imV10HkJM016QIwfK7xLR7KlX5TtX2Lco9WsdrWUR6HRl5sclOVR7DjsX4Kxhw2p.svg",
+    "balance": 58000
+  }
+},
+{
+  "model": "app.card",
+  "pk": 1,
+  "fields": {
+    "number": "123123123123",
+    "cardholder_name": "Abror Qodirov"
+  }
+},
+{
+  "model": "app.game",
+  "pk": 1,
+  "fields": {
+    "name": "League of Legends: Wild Rift",
+    "name_ru": "Лига Легенд: Wild Rift",
+    "name_en": "League of Legends: Wild Rift",
+    "slug": "leage-of-legends",
+    "image_path": "https://cdn.moogold.com/2020/12/lol-wild-rift-445x445.jpg",
+    "inputs": null,
+    "servers": [],
+    "categories": [
+      1
+    ]
+  }
+},
+{
+  "model": "app.game",
+  "pk": 2,
+  "fields": {
+    "name": "Mobile Lengends (Global)",
+    "name_ru": "Мобайл Легендс (Глобал)",
+    "name_en": "Mobile Legends (Global)",
+    "slug": "mobile-legends-global",
+    "image_path": "https://cdn.moogold.com/2019/11/mobile-legends-bang-bang-445x445.jpg",
+    "inputs": "user_id,server_id",
+    "servers": [],
+    "categories": [
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "app.game",
+  "pk": 3,
+  "fields": {
+    "name": "Fc Mobile",
+    "name_ru": "ФК Мобайл",
+    "name_en": "Fc Mobile",
+    "slug": "fc-mobile",
+    "image_path": "https://cdn.moogold.com/2023/06/FIFA-Mobile.jpg",
+    "inputs": null,
+    "servers": [],
+    "categories": [
+      6
+    ]
+  }
+},
+{
+  "model": "app.game",
+  "pk": 4,
+  "fields": {
+    "name": "Arena of Valor (ID)",
+    "name_ru": "Арена Доблести (ID)",
+    "name_en": "Arena of Valor (ID)",
+    "slug": "arena-of-valor-id",
+    "image_path": "https://cdn.moogold.com/2022/11/arena-of-valor.jpg",
+    "inputs": null,
+    "servers": [],
+    "categories": [
+      7
+    ]
+  }
+},
+{
+  "model": "app.game",
+  "pk": 5,
+  "fields": {
+    "name": "Pubg",
+    "name_ru": "Пубг",
+    "name_en": "Pubg",
+    "slug": "pubg",
+    "image_path": "https://cdn.moogold.com/2019/08/pubg-445x445.jpg",
+    "inputs": null,
+    "servers": [],
+    "categories": [
+      5,
+      8
+    ]
+  }
+},
+{
+  "model": "app.game",
+  "pk": 6,
+  "fields": {
+    "name": "Free Fire",
+    "name_ru": "Фри Фаер",
+    "name_en": "Free Fire",
+    "slug": "free-fire",
+    "image_path": "https://cdn.moogold.com/2024/07/garena-free-fire.jpg",
+    "inputs": null,
+    "servers": [],
+    "categories": [
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "app.game",
+  "pk": 7,
+  "fields": {
+    "name": "HOK",
+    "name_ru": "ХОК",
+    "name_en": "HOK",
+    "slug": "hok",
+    "image_path": "https://cdn.moogold.com/2023/09/honor-of-kings.jpg",
+    "inputs": null,
+    "servers": [],
+    "categories": [
+      9
+    ]
+  }
+},
+{
+  "model": "app.game",
+  "pk": 8,
+  "fields": {
+    "name": "Arena Breakout",
+    "name_ru": "Арена Прорыва",
+    "name_en": "Arena Breakout",
+    "slug": "arena-breakout",
+    "image_path": "https://cdn.moogold.com/2023/07/arena-breakout.jpg",
+    "inputs": null,
+    "servers": [],
+    "categories": [
+      5,
+      10
+    ]
+  }
+},
+{
+  "model": "app.game",
+  "pk": 9,
+  "fields": {
+    "name": "Blood Strike",
+    "name_ru": "Блад Страйк",
+    "name_en": "Blood Strike",
+    "slug": "blood-strike",
+    "image_path": "https://cdn.moogold.com/2023/11/blood-strike.jpg",
+    "inputs": null,
+    "servers": [],
+    "categories": [
+      11
+    ]
+  }
+},
+{
+  "model": "app.game",
+  "pk": 10,
+  "fields": {
+    "name": "Genshin Impact",
+    "name_ru": "Геншин Импакт",
+    "name_en": "Genshin Impact",
+    "slug": "genshin-impact",
+    "image_path": "https://cdn.moogold.com/2020/10/genshin-impact-logo-revised.jpg",
+    "inputs": null,
+    "servers": [],
+    "categories": [
+      12
+    ]
+  }
+},
+{
+  "model": "app.game",
+  "pk": 11,
+  "fields": {
+    "name": "Steam gift card (USD)",
+    "name_ru": "Steam подарочная карта (USD)",
+    "name_en": "Steam gift card (USD)",
+    "slug": "steam-gift-card-usd",
+    "image_path": "https://cdn.moogold.com/2019/12/USA.jpg",
+    "inputs": null,
+    "servers": [],
+    "categories": [
+      13
+    ]
+  }
+},
+{
+  "model": "app.category",
+  "pk": 1,
+  "fields": {
+    "name": "Birliklar",
+    "name_ru": "Основная валюта",
+    "name_en": "Cores",
+    "description": "Birlik (Wild Core) — bu Wild Rift o‘yinidagi premium valyuta.",
+    "description_ru": "Wild Core — это премиальная валюта в игре Wild Rift.",
+    "description_en": "Wild Core is the premium currency in League of Legends: Wild Rift.",
+    "slug": "wild-core"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 3,
+  "fields": {
+    "name": "1 martalik olmos",
+    "name_ru": "1 разовый алмаз",
+    "name_en": "One-time diamond",
+    "description": "Bir martalik sotib olinadigan olmos.",
+    "description_ru": "Разовая покупка алмазов.",
+    "description_en": "One-time purchase of diamonds.",
+    "slug": "one-time-diamond"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 4,
+  "fields": {
+    "name": "olmos",
+    "name_ru": "алмаз",
+    "name_en": "Diamond",
+    "description": "Doimiy sotib olinadigan olmos.",
+    "description_ru": "Постоянно покупаемые алмазы.",
+    "description_en": "Regularly purchasable diamonds.",
+    "slug": "diamond"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 5,
+  "fields": {
+    "name": "obuna",
+    "name_ru": "подписка",
+    "name_en": "Subscription",
+    "description": "Oʻyinga doimiy obuna.",
+    "description_ru": "Постоянная подписка на игру.",
+    "description_en": "Recurring game subscription.",
+    "slug": "subscription"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 6,
+  "fields": {
+    "name": "ballar",
+    "name_ru": "поинты",
+    "name_en": "Points",
+    "description": "Oʻyin ichidagi ballar.",
+    "description_ru": "Очки внутри игры.",
+    "description_en": "In-game points.",
+    "slug": "points"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 7,
+  "fields": {
+    "name": "vaucherlar",
+    "name_ru": "ваучеры",
+    "name_en": "Vouchers",
+    "description": "Toʻlov uchun maxsus kodlar.",
+    "description_ru": "Специальные коды для оплаты.",
+    "description_en": "Special payment vouchers.",
+    "slug": "vouchers"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 8,
+  "fields": {
+    "name": "uc",
+    "name_ru": "UC",
+    "name_en": "UC",
+    "description": "PUBG valyutasi – Unknown Cash.",
+    "description_ru": "Валюта PUBG — Unknown Cash.",
+    "description_en": "PUBG currency — Unknown Cash.",
+    "slug": "uc"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 9,
+  "fields": {
+    "name": "token",
+    "name_ru": "токен",
+    "name_en": "Token",
+    "description": "Oʻyindagi maxsus tokenlar.",
+    "description_ru": "Специальные токены в игре.",
+    "description_en": "Special in-game tokens.",
+    "slug": "token"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 10,
+  "fields": {
+    "name": "bond",
+    "name_ru": "облигация",
+    "name_en": "Bond",
+    "description": "Alohida valyuta turi (masalan, HOK uchun).",
+    "description_ru": "Отдельный тип валюты (например, для HOK).",
+    "description_en": "Special currency type (e.g. for HOK).",
+    "slug": "bond"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 11,
+  "fields": {
+    "name": "oltin",
+    "name_ru": "золото",
+    "name_en": "Gold",
+    "description": "Oddiy oʻyin ichidagi oltin.",
+    "description_ru": "Обычное внутриигровое золото.",
+    "description_en": "Standard in-game gold.",
+    "slug": "gold"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 12,
+  "fields": {
+    "name": "kristall",
+    "name_ru": "бриллиант",
+    "name_en": "Crystal",
+    "description": "Yana bir xil turdagi qimmatbaho valyuta.",
+    "description_ru": "Ещё один тип ценной валюты.",
+    "description_en": "Another premium-like currency.",
+    "slug": "crystal"
+  }
+},
+{
+  "model": "app.category",
+  "pk": 13,
+  "fields": {
+    "name": "USD",
+    "name_ru": "USD",
+    "name_en": "USD",
+    "description": "AQSH dollarida qiymat.",
+    "description_ru": "Стоимость в долларах США.",
+    "description_en": "Value in USD.",
+    "slug": "usd"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 1,
+  "fields": {
+    "name": "40 Fc points",
+    "name_ru": "40 очков FC",
+    "name_en": "40 Fc points",
+    "price": "7000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "fc-mobile",
+    "category": "points",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "8967968",
+    "reseller_category": "50",
+    "slug": "fc-40-points"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 2,
+  "fields": {
+    "name": "100 Fc points",
+    "name_ru": "100 очков FC",
+    "name_en": "100 Fc points",
+    "price": "16000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "fc-mobile",
+    "category": "points",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "8967969",
+    "reseller_category": "50",
+    "slug": "fc-100-points"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 3,
+  "fields": {
+    "name": "520 Fc points",
+    "name_ru": "520 очков FC",
+    "name_en": "520 Fc points",
+    "price": "70000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "fc-mobile",
+    "category": "points",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "8967970",
+    "reseller_category": "50",
+    "slug": "fc-520-points"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 4,
+  "fields": {
+    "name": "1070 Fc points",
+    "name_ru": "1070 очков FC",
+    "name_en": "1070 Fc points",
+    "price": "130000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "fc-mobile",
+    "category": "points",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "8967971",
+    "reseller_category": "50",
+    "slug": "fc-1070-points"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 5,
+  "fields": {
+    "name": "2200 Fc points",
+    "name_ru": "2200 очков FC",
+    "name_en": "2200 Fc points",
+    "price": "270000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "fc-mobile",
+    "category": "points",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "8967972",
+    "reseller_category": "50",
+    "slug": "fc-2200-points"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 6,
+  "fields": {
+    "name": "5750 Fc points",
+    "name_ru": "5750 очков FC",
+    "name_en": "5750 Fc points",
+    "price": "680000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "fc-mobile",
+    "category": "points",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "8967973",
+    "reseller_category": "50",
+    "slug": "fc-5750-points"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 7,
+  "fields": {
+    "name": "12000 Fc points",
+    "name_ru": "12000 очков FC",
+    "name_en": "12000 Fc points",
+    "price": "1450000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "fc-mobile",
+    "category": "points",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "8967974",
+    "reseller_category": "50",
+    "slug": "fc-12000-points"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 8,
+  "fields": {
+    "name": "500 + 65 Diamonds (First Top-Up Bonus)",
+    "name_ru": "500 + 65 алмазов (бонус первого пополнения)",
+    "name_en": "500 + 65 Diamonds (First Top-Up Bonus)",
+    "price": "100000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "one-time-diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "15972915",
+    "reseller_category": "50",
+    "slug": "ml-500-65-diamonds-first-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 9,
+  "fields": {
+    "name": "250 + 25 Diamonds (First Top-Up Bonus)",
+    "name_ru": "250 + 25 алмазов (бонус первого пополнения)",
+    "name_en": "250 + 25 Diamonds (First Top-Up Bonus)",
+    "price": "50000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "one-time-diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "15972923",
+    "reseller_category": "50",
+    "slug": "ml-250-25-diamonds-first-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 10,
+  "fields": {
+    "name": "150 + 15 Diamonds (First Top-Up Bonus)",
+    "name_ru": "150 + 15 алмазов (бонус первого пополнения)",
+    "name_en": "150 + 15 Diamonds (First Top-Up Bonus)",
+    "price": "35000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "one-time-diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "15972925",
+    "reseller_category": "50",
+    "slug": "ml-150-15-diamonds-first-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 11,
+  "fields": {
+    "name": "50 + 5 Diamonds (First Top-Up Bonus)",
+    "name_ru": "50 + 5 алмазов (бонус первого пополнения)",
+    "name_en": "50 + 5 Diamonds (First Top-Up Bonus)",
+    "price": "12000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "one-time-diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "15972928",
+    "reseller_category": "50",
+    "slug": "ml-50-5-diamonds-first-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 12,
+  "fields": {
+    "name": "7740 Diamonds + 1548 Bonus",
+    "name_ru": "7740 алмазов + 1548 бонус",
+    "name_en": "7740 Diamonds + 1548 Bonus",
+    "price": "1420000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5555341",
+    "reseller_category": "50",
+    "slug": "ml-7740-diamonds-1548-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 13,
+  "fields": {
+    "name": "4649 Diamonds + 883 Bonus",
+    "name_ru": "4649 алмазов + 883 бонус",
+    "name_en": "4649 Diamonds + 883 Bonus",
+    "price": "890000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5555342",
+    "reseller_category": "50",
+    "slug": "ml-4649-diamonds-883-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 14,
+  "fields": {
+    "name": "3099 Diamonds + 589 Bonus",
+    "name_ru": "3099 алмазов + 589 бонус",
+    "name_en": "3099 Diamonds + 589 Bonus",
+    "price": "590000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5555343",
+    "reseller_category": "50",
+    "slug": "ml-3099-diamonds-589-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 15,
+  "fields": {
+    "name": "1860 Diamonds + 335 Bonus",
+    "name_ru": "1860 алмазов + 335 бонус",
+    "name_en": "1860 Diamonds + 335 Bonus",
+    "price": "350000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5555344",
+    "reseller_category": "50",
+    "slug": "ml-1860-diamonds-335-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 16,
+  "fields": {
+    "name": "625 Diamonds + 81 Bonus",
+    "name_ru": "625 алмазов + 81 бонус",
+    "name_en": "625 Diamonds + 81 Bonus",
+    "price": "120000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5555345",
+    "reseller_category": "50",
+    "slug": "ml-625-diamonds-81-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 17,
+  "fields": {
+    "name": "234 Diamonds + 23 Bonus",
+    "name_ru": "234 алмаза + 23 бонус",
+    "name_en": "234 Diamonds + 23 Bonus",
+    "price": "45000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5555346",
+    "reseller_category": "50",
+    "slug": "ml-234-diamonds-23-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 18,
+  "fields": {
+    "name": "156 Diamonds + 16 Bonus",
+    "name_ru": "156 алмазов + 16 бонус",
+    "name_en": "156 Diamonds + 16 Bonus",
+    "price": "31000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5555347",
+    "reseller_category": "50",
+    "slug": "ml-156-diamonds-16-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 19,
+  "fields": {
+    "name": "78 Diamonds + 8 Bonus",
+    "name_ru": "78 алмазов + 8 бонус",
+    "name_en": "78 Diamonds + 8 Bonus",
+    "price": "16000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5555348",
+    "reseller_category": "50",
+    "slug": "ml-78-diamonds-8-bonus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 20,
+  "fields": {
+    "name": "10 + 1 Diamonds",
+    "name_ru": "10 + 1 алмаз",
+    "name_en": "10 + 1 Diamonds",
+    "price": "3500",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4700134",
+    "reseller_category": "50",
+    "slug": "ml-10-1-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 21,
+  "fields": {
+    "name": "20 + 2 Diamonds",
+    "name_ru": "20 + 2 алмаза",
+    "name_en": "20 + 2 Diamonds",
+    "price": "7000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4700148",
+    "reseller_category": "50",
+    "slug": "ml-20-2-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 22,
+  "fields": {
+    "name": "Weekly Pass",
+    "name_ru": "Недельный пропуск",
+    "name_en": "Weekly Pass",
+    "price": "20000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4690783",
+    "reseller_category": "50",
+    "slug": "ml-weekly-pass"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 23,
+  "fields": {
+    "name": "Twilight Pass",
+    "name_ru": "Сумеречный пропуск",
+    "name_en": "Twilight Pass",
+    "price": "105000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "mobile-legends-global",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4690786",
+    "reseller_category": "50",
+    "slug": "ml-twilight-pass"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 24,
+  "fields": {
+    "name": "425 cores",
+    "name_ru": "425 ядер",
+    "name_en": "425 cores",
+    "price": "48000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "leage-of-legends",
+    "category": "wild-core",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "11533333",
+    "reseller_category": "50",
+    "slug": "lol-425-cores"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 25,
+  "fields": {
+    "name": "1000 cores",
+    "name_ru": "1000 ядер",
+    "name_en": "1000 cores",
+    "price": "105000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "leage-of-legends",
+    "category": "wild-core",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "11533334",
+    "reseller_category": "50",
+    "slug": "lol-1000-cores"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 26,
+  "fields": {
+    "name": "1850 cores",
+    "name_ru": "1850 ядер",
+    "name_en": "1850 cores",
+    "price": "190000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "leage-of-legends",
+    "category": "wild-core",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "11533336",
+    "reseller_category": "50",
+    "slug": "lol-1850-cores"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 27,
+  "fields": {
+    "name": "3275 cores",
+    "name_ru": "3275 ядер",
+    "name_en": "3275 cores",
+    "price": "330000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "leage-of-legends",
+    "category": "wild-core",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "11533337",
+    "reseller_category": "50",
+    "slug": "lol-3275-cores"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 28,
+  "fields": {
+    "name": "4800 cores",
+    "name_ru": "4800 ядер",
+    "name_en": "4800 cores",
+    "price": "470000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "leage-of-legends",
+    "category": "wild-core",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "11533338",
+    "reseller_category": "50",
+    "slug": "lol-4800-cores"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 29,
+  "fields": {
+    "name": "10000 cores",
+    "name_ru": "10000 ядер",
+    "name_en": "10000 cores",
+    "price": "950000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "leage-of-legends",
+    "category": "wild-core",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "11533339",
+    "reseller_category": "50",
+    "slug": "lol-10000-cores"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 30,
+  "fields": {
+    "name": "40 Vouchers",
+    "name_ru": "40 ваучеров",
+    "name_en": "40 Vouchers",
+    "price": "9000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-of-valor-id",
+    "category": "vouchers",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "2245012",
+    "reseller_category": "50",
+    "slug": "aov-40-vouchers"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 31,
+  "fields": {
+    "name": "90 Vouchers",
+    "name_ru": "90 ваучеров",
+    "name_en": "90 Vouchers",
+    "price": "18000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-of-valor-id",
+    "category": "vouchers",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "2245013",
+    "reseller_category": "50",
+    "slug": "aov-90-vouchers"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 32,
+  "fields": {
+    "name": "230 Vouchers",
+    "name_ru": "230 ваучеров",
+    "name_en": "230 Vouchers",
+    "price": "42000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-of-valor-id",
+    "category": "vouchers",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "2245014",
+    "reseller_category": "50",
+    "slug": "aov-230-vouchers"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 33,
+  "fields": {
+    "name": "470 Vouchers",
+    "name_ru": "470 ваучеров",
+    "name_en": "470 Vouchers",
+    "price": "80000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-of-valor-id",
+    "category": "vouchers",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "2245015",
+    "reseller_category": "50",
+    "slug": "aov-470-vouchers"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 34,
+  "fields": {
+    "name": "950 Vouchers",
+    "name_ru": "950 ваучеров",
+    "name_en": "950 Vouchers",
+    "price": "165000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-of-valor-id",
+    "category": "vouchers",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "2245016",
+    "reseller_category": "50",
+    "slug": "aov-950-vouchers"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 35,
+  "fields": {
+    "name": "1430 Vouchers",
+    "name_ru": "1430 ваучеров",
+    "name_en": "1430 Vouchers",
+    "price": "240000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-of-valor-id",
+    "category": "vouchers",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "2245017",
+    "reseller_category": "50",
+    "slug": "aov-1430-vouchers"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 36,
+  "fields": {
+    "name": "2390 Vouchers",
+    "name_ru": "2390 ваучеров",
+    "name_en": "2390 Vouchers",
+    "price": "400000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-of-valor-id",
+    "category": "vouchers",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "2245018",
+    "reseller_category": "50",
+    "slug": "aov-2390-vouchers"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 37,
+  "fields": {
+    "name": "4800 Vouchers",
+    "name_ru": "4800 ваучеров",
+    "name_en": "4800 Vouchers",
+    "price": "800000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-of-valor-id",
+    "category": "vouchers",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "2245019",
+    "reseller_category": "50",
+    "slug": "aov-4800-vouchers"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 38,
+  "fields": {
+    "name": "60 Unknown Cash",
+    "name_ru": "60 неизвестной валюты",
+    "name_en": "60 Unknown Cash",
+    "price": "13000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "pubg",
+    "category": "uc",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4085924",
+    "reseller_category": "50",
+    "slug": "pubg-60-uc"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 39,
+  "fields": {
+    "name": "325 Unknown Cash",
+    "name_ru": "325 неизвестной валюты",
+    "name_en": "325 Unknown Cash",
+    "price": "59000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "pubg",
+    "category": "uc",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4085925",
+    "reseller_category": "50",
+    "slug": "pubg-325-uc"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 40,
+  "fields": {
+    "name": "660 Unknown Cash",
+    "name_ru": "660 неизвестной валюты",
+    "name_en": "660 Unknown Cash",
+    "price": "118000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "pubg",
+    "category": "uc",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4085927",
+    "reseller_category": "50",
+    "slug": "pubg-660-uc"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 41,
+  "fields": {
+    "name": "1800 Unknown Cash",
+    "name_ru": "1800 неизвестной валюты",
+    "name_en": "1800 Unknown Cash",
+    "price": "299000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "pubg",
+    "category": "uc",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4085929",
+    "reseller_category": "50",
+    "slug": "pubg-1800-uc"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 42,
+  "fields": {
+    "name": "3850 Unknown Cash",
+    "name_ru": "3850 неизвестной валюты",
+    "name_en": "3850 Unknown Cash",
+    "price": "590000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "pubg",
+    "category": "uc",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4085931",
+    "reseller_category": "50",
+    "slug": "pubg-3850-uc"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 43,
+  "fields": {
+    "name": "8100 Unknown Cash",
+    "name_ru": "8100 неизвестной валюты",
+    "name_en": "8100 Unknown Cash",
+    "price": "1180000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "pubg",
+    "category": "uc",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4085933",
+    "reseller_category": "50",
+    "slug": "pubg-8100-uc"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 44,
+  "fields": {
+    "name": "Elite RP Upgrade Pack",
+    "name_ru": "Элитный пакет улучшения RP",
+    "name_en": "Elite RP Upgrade Pack",
+    "price": "370000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "pubg",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4085940",
+    "reseller_category": "50",
+    "slug": "pubg-elite-rp-upgrade"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 45,
+  "fields": {
+    "name": "RP Upgrade Pack",
+    "name_ru": "Пакет улучшения RP",
+    "name_en": "RP Upgrade Pack",
+    "price": "135000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "pubg",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4085941",
+    "reseller_category": "50",
+    "slug": "pubg-rp-upgrade"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 46,
+  "fields": {
+    "name": "WEEKLY LITE",
+    "name_ru": "НЕДЕЛЬНЫЙ ЛАЙТ",
+    "name_en": "WEEKLY LITE",
+    "price": "8000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "11012068",
+    "reseller_category": "50",
+    "slug": "ff-weekly-lite"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 47,
+  "fields": {
+    "name": "50 Diamonds",
+    "name_ru": "50 алмазов",
+    "name_en": "50 Diamonds",
+    "price": "9000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "11011927",
+    "reseller_category": "50",
+    "slug": "ff-50-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 48,
+  "fields": {
+    "name": "25 Diamonds",
+    "name_ru": "25 алмазов",
+    "name_en": "25 Diamonds",
+    "price": "5000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "11011929",
+    "reseller_category": "50",
+    "slug": "ff-25-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 49,
+  "fields": {
+    "name": "110 Diamonds",
+    "name_ru": "110 алмазов",
+    "name_en": "110 Diamonds",
+    "price": "15000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "215570",
+    "reseller_category": "50",
+    "slug": "ff-110-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 50,
+  "fields": {
+    "name": "231 Diamonds",
+    "name_ru": "231 алмаз",
+    "name_en": "231 Diamonds",
+    "price": "30000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "215571",
+    "reseller_category": "50",
+    "slug": "ff-231-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 51,
+  "fields": {
+    "name": "645 Diamonds",
+    "name_ru": "645 алмазов",
+    "name_en": "645 Diamonds",
+    "price": "85000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "215576",
+    "reseller_category": "50",
+    "slug": "ff-645-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 52,
+  "fields": {
+    "name": "583 Diamonds",
+    "name_ru": "583 алмаза",
+    "name_en": "583 Diamonds",
+    "price": "70000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "241201",
+    "reseller_category": "50",
+    "slug": "ff-583-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 53,
+  "fields": {
+    "name": "4450 Diamonds",
+    "name_ru": "4450 алмазов",
+    "name_en": "4450 Diamonds",
+    "price": "570000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "215583",
+    "reseller_category": "50",
+    "slug": "ff-4450-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 54,
+  "fields": {
+    "name": "1188 Diamonds",
+    "name_ru": "1188 алмазов",
+    "name_en": "1188 Diamonds",
+    "price": "135000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "241203",
+    "reseller_category": "50",
+    "slug": "ff-1188-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 55,
+  "fields": {
+    "name": "6900 Diamonds",
+    "name_ru": "6900 алмазов",
+    "name_en": "6900 Diamonds",
+    "price": "850000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "215586",
+    "reseller_category": "50",
+    "slug": "ff-6900-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 56,
+  "fields": {
+    "name": "Weekly Membership",
+    "name_ru": "Недельное членство",
+    "name_en": "Weekly Membership",
+    "price": "30000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "215587",
+    "reseller_category": "50",
+    "slug": "ff-weekly-membership"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 57,
+  "fields": {
+    "name": "2420 Diamonds",
+    "name_ru": "2420 алмазов",
+    "name_en": "2420 Diamonds",
+    "price": "285000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "diamond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "241205",
+    "reseller_category": "50",
+    "slug": "ff-2420-diamonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 58,
+  "fields": {
+    "name": "Monthly Membership",
+    "name_ru": "Месячное членство",
+    "name_en": "Monthly Membership",
+    "price": "135000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "free-fire",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "215588",
+    "reseller_category": "50",
+    "slug": "ff-monthly-membership"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 59,
+  "fields": {
+    "name": "23 Tokens",
+    "name_ru": "23 токена",
+    "name_en": "23 Tokens",
+    "price": "5500",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "10589856",
+    "reseller_category": "50",
+    "slug": "hok-23-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 60,
+  "fields": {
+    "name": "8 Tokens",
+    "name_ru": "8 токенов",
+    "name_en": "8 Tokens",
+    "price": "2000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "10589857",
+    "reseller_category": "50",
+    "slug": "hok-8-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 61,
+  "fields": {
+    "name": "Weekly Card Plus",
+    "name_ru": "Недельная карта плюс",
+    "name_en": "Weekly Card Plus",
+    "price": "34000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "9249043",
+    "reseller_category": "50",
+    "slug": "hok-weekly-card-plus"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 62,
+  "fields": {
+    "name": "Weekly Card",
+    "name_ru": "Недельная карта",
+    "name_en": "Weekly Card",
+    "price": "13000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "9249045",
+    "reseller_category": "50",
+    "slug": "hok-weekly-card"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 63,
+  "fields": {
+    "name": "16 Tokens",
+    "name_ru": "16 токенов",
+    "name_en": "16 Tokens",
+    "price": "4000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5177683",
+    "reseller_category": "50",
+    "slug": "hok-16-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 64,
+  "fields": {
+    "name": "80 Tokens",
+    "name_ru": "80 токенов",
+    "name_en": "80 Tokens",
+    "price": "13000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5177684",
+    "reseller_category": "50",
+    "slug": "hok-80-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 65,
+  "fields": {
+    "name": "240 Tokens",
+    "name_ru": "240 токенов",
+    "name_en": "240 Tokens",
+    "price": "34000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5177685",
+    "reseller_category": "50",
+    "slug": "hok-240-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 66,
+  "fields": {
+    "name": "400 Tokens",
+    "name_ru": "400 токенов",
+    "name_en": "400 Tokens",
+    "price": "58000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5177686",
+    "reseller_category": "50",
+    "slug": "hok-400-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 67,
+  "fields": {
+    "name": "560 Tokens",
+    "name_ru": "560 токенов",
+    "name_en": "560 Tokens",
+    "price": "78000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5177688",
+    "reseller_category": "50",
+    "slug": "hok-560-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 68,
+  "fields": {
+    "name": "800 + 30 Tokens",
+    "name_ru": "800 + 30 токенов",
+    "name_en": "800 + 30 Tokens",
+    "price": "115000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5177689",
+    "reseller_category": "50",
+    "slug": "hok-800-30-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 69,
+  "fields": {
+    "name": "1200 + 45 Tokens",
+    "name_ru": "1200 + 45 токенов",
+    "name_en": "1200 + 45 Tokens",
+    "price": "170000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5177690",
+    "reseller_category": "50",
+    "slug": "hok-1200-45-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 70,
+  "fields": {
+    "name": "2400 + 108 Tokens",
+    "name_ru": "2400 + 108 токенов",
+    "name_en": "2400 + 108 Tokens",
+    "price": "340000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5177691",
+    "reseller_category": "50",
+    "slug": "hok-2400-108-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 71,
+  "fields": {
+    "name": "4000 + 180 Tokens",
+    "name_ru": "4000 + 180 токенов",
+    "name_en": "4000 + 180 Tokens",
+    "price": "570000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5177694",
+    "reseller_category": "50",
+    "slug": "hok-4000-180-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 72,
+  "fields": {
+    "name": "8000 + 360 Tokens",
+    "name_ru": "8000 + 360 токенов",
+    "name_en": "8000 + 360 Tokens",
+    "price": "1150000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "hok",
+    "category": "token",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "5177696",
+    "reseller_category": "50",
+    "slug": "hok-8000-360-tokens"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 73,
+  "fields": {
+    "name": "Beginner Select",
+    "name_ru": "Выбор новичка",
+    "name_en": "Beginner Select",
+    "price": "12000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836164",
+    "reseller_category": "50",
+    "slug": "ab-beginner-select"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 74,
+  "fields": {
+    "name": "Premium Battle Pass",
+    "name_ru": "Премиум боевой пропуск",
+    "name_en": "Premium Battle Pass",
+    "price": "145000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836166",
+    "reseller_category": "50",
+    "slug": "ab-premium-battle-pass"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 75,
+  "fields": {
+    "name": "Bulletproof Case Privileges",
+    "name_ru": "Привилегии бронированного кейса",
+    "name_en": "Bulletproof Case Privileges",
+    "price": "45000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836167",
+    "reseller_category": "50",
+    "slug": "ab-bulletproof-case-privileges"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 76,
+  "fields": {
+    "name": "Elite Trial (30d) + 300 Bonds",
+    "name_ru": "Элитная пробная версия (30д) + 300 облигаций",
+    "name_en": "Elite Trial (30d) + 300 Bonds",
+    "price": "52000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836168",
+    "reseller_category": "50",
+    "slug": "ab-elite-trial-30d-300-bonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 77,
+  "fields": {
+    "name": "Advanced Battle Pass",
+    "name_ru": "Продвинутый боевой пропуск",
+    "name_en": "Advanced Battle Pass",
+    "price": "52000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836165",
+    "reseller_category": "50",
+    "slug": "ab-advanced-battle-pass"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 78,
+  "fields": {
+    "name": "Composite Case Privileges",
+    "name_ru": "Привилегии составного кейса",
+    "name_en": "Composite Case Privileges",
+    "price": "95000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836169",
+    "reseller_category": "50",
+    "slug": "ab-composite-case-privileges"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 79,
+  "fields": {
+    "name": "60 + 6 Bonds",
+    "name_ru": "60 + 6 облигаций",
+    "name_en": "60 + 6 Bonds",
+    "price": "15000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "bond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836158",
+    "reseller_category": "50",
+    "slug": "ab-60-6-bonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 80,
+  "fields": {
+    "name": "310 + 25 Bonds",
+    "name_ru": "310 + 25 облигаций",
+    "name_en": "310 + 25 Bonds",
+    "price": "60000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "bond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836159",
+    "reseller_category": "50",
+    "slug": "ab-310-25-bonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 81,
+  "fields": {
+    "name": "630 + 45 Bonds",
+    "name_ru": "630 + 45 облигаций",
+    "name_en": "630 + 45 Bonds",
+    "price": "125000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "bond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836160",
+    "reseller_category": "50",
+    "slug": "ab-630-45-bonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 82,
+  "fields": {
+    "name": "1580 + 110 Bonds",
+    "name_ru": "1580 + 110 облигаций",
+    "name_en": "1580 + 110 Bonds",
+    "price": "310000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "bond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836161",
+    "reseller_category": "50",
+    "slug": "ab-1580-110-bonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 83,
+  "fields": {
+    "name": "3200 + 200 Bonds",
+    "name_ru": "3200 + 200 облигаций",
+    "name_en": "3200 + 200 Bonds",
+    "price": "590000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "bond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836162",
+    "reseller_category": "50",
+    "slug": "ab-3200-200-bonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 84,
+  "fields": {
+    "name": "6500 + 320 Bonds",
+    "name_ru": "6500 + 320 облигаций",
+    "name_en": "6500 + 320 Bonds",
+    "price": "1150000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "arena-breakout",
+    "category": "bond",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "4836163",
+    "reseller_category": "50",
+    "slug": "ab-6500-320-bonds"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 85,
+  "fields": {
+    "name": "Inkforge Eternal Valor Pre-Order Begins",
+    "name_ru": "Предзаказ Inkforge Eternal Valor начинается",
+    "name_en": "Inkforge Eternal Valor Pre-Order Begins",
+    "price": "25000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "23347155",
+    "reseller_category": "50",
+    "slug": "bs-inkforge-eternal-valor-preorder"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 86,
+  "fields": {
+    "name": "50 + 6 Gold",
+    "name_ru": "50 + 6 золота",
+    "name_en": "50 + 6 Gold",
+    "price": "7000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "gold",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "23347156",
+    "reseller_category": "50",
+    "slug": "bs-50-6-gold"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 87,
+  "fields": {
+    "name": "100 + 16 Gold",
+    "name_ru": "100 + 16 золота",
+    "name_en": "100 + 16 Gold",
+    "price": "13000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "gold",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "23347157",
+    "reseller_category": "50",
+    "slug": "bs-100-16-gold"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 88,
+  "fields": {
+    "name": "300 + 52 Gold",
+    "name_ru": "300 + 52 золота",
+    "name_en": "300 + 52 Gold",
+    "price": "35000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "gold",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "23347158",
+    "reseller_category": "50",
+    "slug": "bs-300-52-gold"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 89,
+  "fields": {
+    "name": "500 + 94 Gold",
+    "name_ru": "500 + 94 золота",
+    "name_en": "500 + 94 Gold",
+    "price": "55000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "gold",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "23347159",
+    "reseller_category": "50",
+    "slug": "bs-500-94-gold"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 90,
+  "fields": {
+    "name": "1000 + 210 Gold",
+    "name_ru": "1000 + 210 золота",
+    "name_en": "1000 + 210 Gold",
+    "price": "110000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "gold",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "23347160",
+    "reseller_category": "50",
+    "slug": "bs-1000-210-gold"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 91,
+  "fields": {
+    "name": "2000 + 486 Gold",
+    "name_ru": "2000 + 486 золота",
+    "name_en": "2000 + 486 Gold",
+    "price": "230000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "gold",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "23347161",
+    "reseller_category": "50",
+    "slug": "bs-2000-486-gold"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 92,
+  "fields": {
+    "name": "5000 + 1380 Gold",
+    "name_ru": "5000 + 1380 золота",
+    "name_en": "5000 + 1380 Gold",
+    "price": "540000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "gold",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "23347162",
+    "reseller_category": "50",
+    "slug": "bs-5000-1380-gold"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 93,
+  "fields": {
+    "name": "Level-Up Pass",
+    "name_ru": "Пропуск повышения уровня",
+    "name_en": "Level-Up Pass",
+    "price": "30000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "21734479",
+    "reseller_category": "50",
+    "slug": "bs-level-up-pass"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 94,
+  "fields": {
+    "name": "Ultra Skin Lucky Chest",
+    "name_ru": "Удачный сундук ультра скина",
+    "name_en": "Ultra Skin Lucky Chest",
+    "price": "10000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "21734480",
+    "reseller_category": "50",
+    "slug": "bs-ultra-skin-lucky-chest"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 95,
+  "fields": {
+    "name": "Strike Pass Premium",
+    "name_ru": "Страйк пропуск премиум",
+    "name_en": "Strike Pass Premium",
+    "price": "120000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "14131047",
+    "reseller_category": "50",
+    "slug": "bs-strike-pass-premium"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 96,
+  "fields": {
+    "name": "Strike Pass Elite",
+    "name_ru": "Страйк пропуск элит",
+    "name_en": "Strike Pass Elite",
+    "price": "55000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "blood-strike",
+    "category": "subscription",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "14131048",
+    "reseller_category": "50",
+    "slug": "bs-strike-pass-elite"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 97,
+  "fields": {
+    "name": "Genesis Crystals - all pack",
+    "name_ru": "Кристаллы генезиса - все пакеты",
+    "name_en": "Genesis Crystals - all pack",
+    "price": "2200000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "genshin-impact",
+    "category": "crystal",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "20706147",
+    "reseller_category": "50",
+    "slug": "gi-genesis-crystals-all-pack"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 98,
+  "fields": {
+    "name": "60 Genesis Crystals",
+    "name_ru": "60 кристаллов генезиса",
+    "name_en": "60 Genesis Crystals",
+    "price": "12000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "genshin-impact",
+    "category": "crystal",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "673095",
+    "reseller_category": "50",
+    "slug": "gi-60-genesis-crystals"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 99,
+  "fields": {
+    "name": "300+30 Genesis Crystals",
+    "name_ru": "300+30 кристаллов генезиса",
+    "name_en": "300+30 Genesis Crystals",
+    "price": "52000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "genshin-impact",
+    "category": "crystal",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "673096",
+    "reseller_category": "50",
+    "slug": "gi-300-30-genesis-crystals"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 100,
+  "fields": {
+    "name": "980+110 Genesis Crystals",
+    "name_ru": "980+110 кристаллов генезиса",
+    "name_en": "980+110 Genesis Crystals",
+    "price": "155000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "genshin-impact",
+    "category": "crystal",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "673097",
+    "reseller_category": "50",
+    "slug": "gi-980-110-genesis-crystals"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 101,
+  "fields": {
+    "name": "1980+260 Genesis Crystals",
+    "name_ru": "1980+260 кристаллов генезиса",
+    "name_en": "1980+260 Genesis Crystals",
+    "price": "330000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "genshin-impact",
+    "category": "crystal",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "673098",
+    "reseller_category": "50",
+    "slug": "gi-1980-260-genesis-crystals"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 102,
+  "fields": {
+    "name": "3280+600 Genesis Crystals",
+    "name_ru": "3280+600 кристаллов генезиса",
+    "name_en": "3280+600 Genesis Crystals",
+    "price": "520000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "genshin-impact",
+    "category": "crystal",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "673099",
+    "reseller_category": "50",
+    "slug": "gi-3280-600-genesis-crystals"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 103,
+  "fields": {
+    "name": "6480+1600 Genesis Crystals",
+    "name_ru": "6480+1600 кристаллов генезиса",
+    "name_en": "6480+1600 Genesis Crystals",
+    "price": "1000000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "genshin-impact",
+    "category": "crystal",
+    "server": "",
+    "tags": "",
+    "enabled": true,
+    "reseller_id": "673100",
+    "reseller_category": "50",
+    "slug": "gi-6480-1600-genesis-crystals"
+  }
+},
+{
+  "model": "app.merchandise",
+  "pk": 104,
+  "fields": {
+    "name": "Blessing of the Welkin Moon",
+    "name_ru": "Благословение луны Велкин",
+    "name_en": "Blessing of the Welkin Moon",
+    "price": "52000",
+    "currency": "so'm",
+    "currency_ru": "сум",
+    "currency_en": "som",
+    "game": "genshin-impact",
+    "category": "subscription",
+    "server": null,
+    "tags": null,
+    "enabled": true,
+    "reseller_id": "1181776",
+    "reseller_category": "50",
+    "slug": "gi-blessing-welkin-moon"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-06-02T16:29:54.037Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "telegramuser"
+    ],
+    "object_id": "1",
+    "object_repr": "kachka_pachka",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-06-02T16:31:39.100Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "telegramuser"
+    ],
+    "object_id": "3",
+    "object_repr": "kachka_pachka",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-06-02T16:31:39.100Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "telegramuser"
+    ],
+    "object_id": "2",
+    "object_repr": "kachka_pachka",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-06-02T17:05:05.946Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "telegramuser"
+    ],
+    "object_id": "5",
+    "object_repr": "kachka_pachka",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-06-04T17:40:52.874Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Birliklar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-06-04T17:43:28.288Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "1",
+    "object_repr": "League of Legends: Wild Rift",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-06-05T08:07:40.684Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Olmos (Almaz)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-06-05T08:20:52.947Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Olmos (Almaz)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-06-05T08:50:18.267Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "merchandise"
+    ],
+    "object_id": "104",
+    "object_repr": "Blessing of the Welkin Moon",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-06-05T08:51:45.023Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "11",
+    "object_repr": "Steam gift card (USD)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categories\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-06-05T08:52:10.303Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "10",
+    "object_repr": "Genshin Impact",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categories\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-06-05T08:52:22.826Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "9",
+    "object_repr": "Blood Strike",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categories\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-06-05T08:52:40.629Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "8",
+    "object_repr": "Arena Breakout",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categories\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-06-05T08:52:51.347Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "7",
+    "object_repr": "HOK",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categories\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-06-05T08:53:05.293Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "6",
+    "object_repr": "Free Fire",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categories\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-06-05T08:53:15.027Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "5",
+    "object_repr": "Pubg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categories\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-06-05T08:53:28.032Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "4",
+    "object_repr": "Arena of Valor (ID)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categories\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-06-05T08:53:45.938Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "3",
+    "object_repr": "Fc Mobile",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categories\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-06-05T08:54:01.529Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "2",
+    "object_repr": "Mobile Lengends (Global)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categories\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-06-05T08:54:19.248Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "1",
+    "object_repr": "League of Legends: Wild Rift",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-06-05T08:56:42.728Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "2",
+    "object_repr": "Mobile Lengends (Global)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image path\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-06-05T09:00:13.404Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "5",
+    "object_repr": "Pubg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image path\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-06-05T09:02:41.267Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "11",
+    "object_repr": "Steam gift card (USD)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image path\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-06-05T09:02:59.653Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "10",
+    "object_repr": "Genshin Impact",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image path\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-06-05T09:03:25.480Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "9",
+    "object_repr": "Blood Strike",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image path\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-06-05T09:03:45.433Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "8",
+    "object_repr": "Arena Breakout",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image path\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-06-05T09:04:11.802Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "7",
+    "object_repr": "HOK",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image path\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-06-05T09:04:39.602Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "6",
+    "object_repr": "Free Fire",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image path\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-06-05T09:05:15.672Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "4",
+    "object_repr": "Arena of Valor (ID)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image path\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-06-05T09:05:34.559Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "3",
+    "object_repr": "Fc Mobile",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image path\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-06-05T09:06:04.959Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "1",
+    "object_repr": "League of Legends: Wild Rift",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image path\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-06-05T10:06:01.916Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "game"
+    ],
+    "object_id": "2",
+    "object_repr": "Mobile Lengends (Global)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Inputs\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-06-05T10:12:53.936Z",
+    "user": [
+      "abror"
+    ],
+    "content_type": [
+      "app",
+      "card"
+    ],
+    "object_id": "1",
+    "object_repr": "Abror Qodirov",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]

@@ -6,103 +6,18 @@ game:
   image_path: https://cdn.moogold.com/2023/06/FIFA-Mobile.jpg
   servers: []
   inputs: null
-  categories:
-  - name: ballar
-    name_ru: поинты
-    name_en: Points
-    description: Oʻyin ichidagi ballar.
-    description_ru: Очки внутри игры.
-    description_en: In-game points.
-    slug: points
+  categories: []
   merchandise:
-  - id: 1
-    name: 40 Fc points
-    name_ru: 40 очков FC
-    name_en: 40 Fc points
-    prices:
-    - price: 7000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: points
-    tags: []
-    server: ''
-    slug: fc-40-points
   - id: 2
-    name: 100 Fc points
-    name_ru: 100 очков FC
-    name_en: 100 Fc points
+    name: Premium Battle Pass
+    name_ru: Премиум боевой пропуск
+    name_en: Premium Battle Pass
     prices:
-    - price: 16000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: points
+    - price: 145000
+      currency: ''
+      currency_ru: ''
+      currency_en: ''
+    category: subscription
     tags: []
     server: ''
-    slug: fc-100-points
-  - id: 3
-    name: 520 Fc points
-    name_ru: 520 очков FC
-    name_en: 520 Fc points
-    prices:
-    - price: 70000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: points
-    tags: []
-    server: ''
-    slug: fc-520-points
-  - id: 4
-    name: 1070 Fc points
-    name_ru: 1070 очков FC
-    name_en: 1070 Fc points
-    prices:
-    - price: 130000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: points
-    tags: []
-    server: ''
-    slug: fc-1070-points
-  - id: 5
-    name: 2200 Fc points
-    name_ru: 2200 очков FC
-    name_en: 2200 Fc points
-    prices:
-    - price: 270000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: points
-    tags: []
-    server: ''
-    slug: fc-2200-points
-  - id: 6
-    name: 5750 Fc points
-    name_ru: 5750 очков FC
-    name_en: 5750 Fc points
-    prices:
-    - price: 680000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: points
-    tags: []
-    server: ''
-    slug: fc-5750-points
-  - id: 7
-    name: 12000 Fc points
-    name_ru: 12000 очков FC
-    name_en: 12000 Fc points
-    prices:
-    - price: 1450000
-      currency: so'm
-      currency_ru: сум
-      currency_en: som
-    category: points
-    tags: []
-    server: ''
-    slug: fc-12000-points
+    slug: ab-premium-battle-pass
