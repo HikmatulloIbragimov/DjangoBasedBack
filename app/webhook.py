@@ -1,12 +1,17 @@
 import json
 import requests
+import time
+import logging
+
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.db.models import F
-from .models import TelegramUser
 from django.conf import settings
+
+from .models import TelegramUser
 from transaction.tasks import refresh_status
-import time
+
+logger = logging.getLogger(__name__)
 
 
 @csrf_exempt
@@ -19,11 +24,10 @@ def telegram_webhook(request):
     message = data.get("message")
     callback = data.get("callback_query")
 
-    # print(message)
-
     chat_id = (message["chat"]["id"] if message else callback["message"]["chat"]["id"])
-    
+
     if message:
+        logger.info("📥 Message received!")
         user_data = message["from"]
         TelegramUser.objects.get_or_create(
             user_id=str(user_data["id"]),
@@ -33,11 +37,15 @@ def telegram_webhook(request):
                 "photo_url": user_data.get("photo_url")
             }
         )
+
         if "reply_to_message" in message:
+            logger.info("📩 Reply to message detected!")
+
             replied_msg = message["reply_to_message"]
-            
+
             if replied_msg.get("caption", "").startswith("Summa") and replied_msg.get("caption", "").endswith("so'm"):
                 keyboard = replied_msg.get("reply_markup", {}).get("inline_keyboard", [])
+                user_id = None
 
                 if len(keyboard) == 1 and keyboard[0]:
                     callback_data = keyboard[0][0]["callback_data"]
@@ -46,16 +54,16 @@ def telegram_webhook(request):
                         user_id = parts[2]
 
                 photos = replied_msg.get("photo", [])
-                if photos:
-                    image = photos[-1]["file_id"]
-                
-                if message["text"].isnumeric():
-                    amount = int(message["text"])
+                image = photos[-1]["file_id"] if photos else None
 
-                send_telegram_photo(bot_token, admin_id, amount, user_id, image)
+                if message["text"].isnumeric() and user_id and image:
+                    amount = int(message["text"])
+                    logger.info(f"🟡 Sending photo with amount: {amount}, user_id: {user_id}, image: {image}")
+                    send_telegram_photo(bot_token, admin_id, amount, user_id, image)
+                else:
+                    logger.warning("⚠️ Недостаточно данных для отправки фото (amount/user_id/image)")
 
         text = message.get("text", "")
-
         if text == "/start":
             send_inline_image_with_buttons(bot_token, chat_id)
 
@@ -72,20 +80,12 @@ def telegram_webhook(request):
         if cb_data.startswith("accept"):
             try:
                 _, amount, user_id = cb_data.split("_")
-
-                TelegramUser.objects.filter(
-                    user_id=user_id
-                ).update(
-                    balance=F('balance') + int(amount)
-                )
-
+                TelegramUser.objects.filter(user_id=user_id).update(balance=F('balance') + int(amount))
             except Exception as e:
-                print(e)
+                logger.error(f"💥 Error updating balance: {e}")
 
-            delete_message(bot_token, chat_id,
-                           callback["message"]["message_id"])
-        
-        
+            delete_message(bot_token, chat_id, callback["message"]["message_id"])
+
         if cb_data.startswith("refresh"):
             _, transaction_id, timestamp = cb_data.split("_")
             try:
@@ -97,7 +97,7 @@ def telegram_webhook(request):
                 else:
                     answer_callback_query(bot_token, callback_id, f"{10 - (now - timestamp)} soniyada qayta bosishingiz mumkin")
             except Exception as e:
-                print("Refresh error:", e)
+                logger.error(f"Refresh error: {e}")
 
         answer_callback_query(bot_token, callback_id)
 
@@ -112,21 +112,20 @@ def send_telegram_photo(bot_token, admin_id, amount, user_id, image):
         ]
     })
 
-    
     data = {
         "chat_id": admin_id,
         "reply_markup": reply_markup,
         "caption": f"Summa: {amount} so'm",
         "photo": image
     }
-    print("🟡 Sending photo with data:")
-    print(json.dumps(data, indent=2))
+
     try:
         response = requests.post(url, data=data)
-        print("🟢 Telegram response:", response.text)
+        logger.info("🟢 Telegram response: " + response.text)
         response.raise_for_status()
     except Exception as e:
-        print(f"Telegram send error: {e}")
+        logger.error(f"🔴 Telegram send error: {e}")
+
 
 def answer_callback_query(token, callback_query_id, text=None, show_alert=False):
     url = f"https://api.telegram.org/bot{token}/answerCallbackQuery"
@@ -137,6 +136,7 @@ def answer_callback_query(token, callback_query_id, text=None, show_alert=False)
     }
     requests.post(url, json=payload)
 
+
 def delete_message(token, chat_id, message_id):
     url = f"https://api.telegram.org/bot{token}/deleteMessage"
     payload = {
@@ -144,6 +144,7 @@ def delete_message(token, chat_id, message_id):
         "message_id": message_id
     }
     requests.post(url, json=payload)
+
 
 def send_admin(token, chat_id):
     url = f"https://api.telegram.org/bot{token}/sendMessage"
@@ -159,6 +160,7 @@ def send_admin(token, chat_id):
     }
     requests.post(url, json=payload)
 
+
 def send_info(token, chat_id):
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     payload = {
@@ -171,7 +173,6 @@ def send_info(token, chat_id):
         )
     }
     requests.post(url, json=payload)
-
 
 
 def send_inline_image_with_buttons(token, chat_id):
@@ -193,4 +194,4 @@ def send_inline_image_with_buttons(token, chat_id):
         })
     }
     response = requests.post(url, data=payload)
-    print(response.text)
+    logger.info("📷 Sent welcome image: " + response.text)
