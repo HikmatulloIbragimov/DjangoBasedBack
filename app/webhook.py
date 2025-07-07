@@ -119,9 +119,11 @@ def send_telegram_photo(bot_token, admin_id, amount, user_id, image):
         "caption": f"Summa: {amount} so'm",
         "photo": image
     }
-
+    print("🟡 Sending photo with data:")
+    print(json.dumps(data, indent=2))
     try:
         response = requests.post(url, data=data)
+        print("🟢 Telegram response:", response.text)
         response.raise_for_status()
     except Exception as e:
         print(f"Telegram send error: {e}")
