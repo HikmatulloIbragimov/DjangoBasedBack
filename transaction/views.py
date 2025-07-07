@@ -75,7 +75,9 @@ class CreateTransactionApi(View):
                     "all_slugs_in_db": list(Merchandise.objects.values_list("slug", flat=True)),
                     "merchandise_full": list(Merchandise.objects.values("slug", "enabled", "price")),
                     "db_engine": connection.settings_dict["ENGINE"],
-                    "db_name": connection.settings_dict["NAME"]
+                    "db_name": connection.settings_dict["NAME"],
+                    "db_host": connection.settings_dict["HOST"],
+                    "merch_slugs": list(Merchandise.objects.values_list("slug", flat=True))
                 }
                 merchandise = Merchandise.objects.filter(slug=slug, enabled=True).first()
                 if not merchandise:
