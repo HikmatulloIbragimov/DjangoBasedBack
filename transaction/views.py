@@ -72,7 +72,8 @@ class CreateTransactionApi(View):
                 debug_info = {
                     "received_slug": slug,
                     "cart_item": item,
-                    "all_slugs_in_db": list(Merchandise.objects.values_list("slug", flat=True))
+                    "all_slugs_in_db": list(Merchandise.objects.values_list("slug", flat=True)),
+                    "merchandise_full": list(Merchandise.objects.values("slug", "enabled", "price")),
                 }
                 merchandise = Merchandise.objects.filter(slug=slug, enabled=True).first()
                 if not merchandise:
