@@ -8,7 +8,7 @@ import json
 import base64
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
-
+from django.db import connection
 def get_user(request):
     encoded_user = (
         request.headers.get("X-User-ID") or
@@ -74,6 +74,8 @@ class CreateTransactionApi(View):
                     "cart_item": item,
                     "all_slugs_in_db": list(Merchandise.objects.values_list("slug", flat=True)),
                     "merchandise_full": list(Merchandise.objects.values("slug", "enabled", "price")),
+                    "db_engine": connection.settings_dict["ENGINE"],
+                    "db_name": connection.settings_dict["NAME"]
                 }
                 merchandise = Merchandise.objects.filter(slug=slug, enabled=True).first()
                 if not merchandise:
