@@ -58,7 +58,10 @@ class CreateTransactionApi(View):
                 }, status=400)
 
             # Получаем пользователя
-            user = TelegramUser.objects.get(user_id=user_data.get("id"))
+            user, _ = TelegramUser.objects.get_or_create(
+                user_id=user_data.get("id"),
+                defaults={"first_name": user_data.get("first_name", "")}
+            )
 
             total_amount = 0
             transaction_items = []
