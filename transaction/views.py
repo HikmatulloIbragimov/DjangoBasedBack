@@ -6,6 +6,7 @@ from django.db.models import F
 from .tasks import make_moogold_order
 import json
 import base64
+import traceback
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.db import connection
@@ -133,9 +134,8 @@ class CreateTransactionApi(View):
             }, status=404)
 
         except Exception as e:
-            import traceback
             return JsonResponse({
                 "success": False,
-                "message": "Xatolik yuz berdi",
+                "message": f"Xatolik yuz berdi: {str(e)}",
                 "debug": traceback.format_exc()
             }, status=500)
