@@ -4,7 +4,7 @@ from celery import Celery
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bek.settings')
 
-app = Celery('project')
+app = Celery('bek')
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
