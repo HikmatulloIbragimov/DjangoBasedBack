@@ -195,3 +195,6 @@ def send_inline_image_with_buttons(token, chat_id):
     }
     response = requests.post(url, data=payload)
     logger.info("📷 Sent welcome image: " + response.text)
+
+
+
