@@ -46,7 +46,7 @@ class User:
         self.user_id = user_id
 
 
-user = User(settings.TELEGRAM_ADMIN_ID)
+user = User(int(settings.TELEGRAM_ADMIN_ID))
 transaction = transaction("1", user, "delivered")
 
 
