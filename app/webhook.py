@@ -80,7 +80,12 @@ def telegram_webhook(request):
         if cb_data.startswith("accept"):
             try:
                 _, amount, user_id = cb_data.split("_")
-                TelegramUser.objects.filter(user_id=user_id).update(balance=F('balance') + int(amount))
+
+                logger.info(f"[ACCEPT] Пополнение: user_id={user_id} (тип: {type(user_id)}), сумма={amount}")
+
+                TelegramUser.objects.filter(user_id=str(user_id)).update(
+                    balance=F('balance') + int(amount)
+                )
             except Exception as e:
                 logger.error(f"💥 Error updating balance: {e}")
 
