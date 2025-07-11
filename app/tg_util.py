@@ -41,7 +41,7 @@ def send_transaction_info(bot_token, transaction):
             f"🛒 Mahsulot: {transaction.merchandise.name} | {transaction.quantity} dona\n"
             f"💵 Narx: {transaction.amount}\n"
             f"🕒 Qachon ?: {transaction.timestamp.strftime('%Y-%m-%d %H:%M:%S')}\n"
-            f"📥 Kalitlar:\n```json\n{json.dumps(transaction.inputs, indent=2, ensure_ascii=False)}\n```\n"
+            f"📥 Kalitlar:\n{json.dumps(transaction.inputs, indent=2, ensure_ascii=False)}\n"
             f"✅ Status: {status_map.get(transaction.status, 'failed')}"
         ),
         "parse_mode": "Markdown"
