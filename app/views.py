@@ -99,6 +99,8 @@ class UpdateUserApi(View):
         except Exception as e:
             return JsonResponse({'error': str(e)})
 
+def get_admin_id():
+    return int(os.getenv("TELEGRAM_ADMIN_ID"))
 
 @method_decorator(csrf_exempt, name='dispatch')
 class SendVerifyApi(View):
@@ -108,11 +110,16 @@ class SendVerifyApi(View):
         user_id = user_data.get("id")
         image = request.FILES.get('image')
 
-        threading.Thread(target=send_telegram_photo, args=(
-            settings.TELEGRAM_BOT_TOKEN, amount, user_id, image)).start()
+        bot_token = settings.TELEGRAM_BOT_TOKEN
+        admin_id = get_admin_id()
+
+        # ✅ правильный порядок аргументов!
+        threading.Thread(
+            target=send_telegram_photo,
+            args=(bot_token, admin_id, amount, user_id, image)
+        ).start()
 
         return JsonResponse({'ok': True})
-
 def check_admin_id(request):
     return JsonResponse({
         "settings_admin_id": getattr(settings, "TELEGRAM_ADMIN_ID", "❌ не найден"),

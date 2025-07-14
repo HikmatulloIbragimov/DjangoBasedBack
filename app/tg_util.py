@@ -3,7 +3,7 @@ import requests
 import time
 
 
-def send_telegram_photo(bot_token, amount, user_id, image):
+def send_telegram_photo(bot_token, admin_id, amount, user_id, image):
     url = f"https://api.telegram.org/bot{bot_token}/sendPhoto"
     reply_markup = json.dumps({
         "inline_keyboard": [
@@ -13,17 +13,17 @@ def send_telegram_photo(bot_token, amount, user_id, image):
 
     files = {'photo': (image.name, image.read())}
     data = {
-        "chat_id": "8146970004",
+        "chat_id": admin_id,  # ✅ динамически
         "reply_markup": reply_markup,
         "caption": f"Summa: {amount} so'm"
     }
 
     try:
         response = requests.post(url, data=data, files=files)
+        print("🟢 Telegram response:", response.text)
         response.raise_for_status()
     except Exception as e:
-        print(f"Telegram send error: {e}")
-
+        print(f"🔴 Telegram send error: {e}")
 
 def send_transaction_info(bot_token, transaction):
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
