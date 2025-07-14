@@ -112,3 +112,9 @@ class SendVerifyApi(View):
             settings.TELEGRAM_BOT_TOKEN, amount, user_id, image)).start()
 
         return JsonResponse({'ok': True})
+
+def check_admin_id(request):
+    return JsonResponse({
+        "settings_admin_id": getattr(settings, "TELEGRAM_ADMIN_ID", "❌ не найден"),
+        "os_env_admin_id": os.getenv("TELEGRAM_ADMIN_ID", "❌ не найден"),
+    })
