@@ -111,6 +111,7 @@ def telegram_webhook(request):
 
 
 def send_telegram_photo(bot_token, admin_id, amount, user_id, image):
+    logger.warning(f"📤 ИТОГОВЫЙ admin_id: {admin_id} (type: {type(admin_id)})")
     url = f"https://api.telegram.org/bot{bot_token}/sendPhoto"
     reply_markup = json.dumps({
         "inline_keyboard": [
