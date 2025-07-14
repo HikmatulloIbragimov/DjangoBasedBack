@@ -7,17 +7,18 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.db.models import F
 from django.conf import settings
-
+import os
 from .models import TelegramUser
 from transaction.tasks import refresh_status
 
 logger = logging.getLogger(__name__)
-
+def get_admin_id():
+    return int(os.getenv("TELEGRAM_ADMIN_ID"))
 
 @csrf_exempt
 def telegram_webhook(request):
     bot_token = settings.TELEGRAM_BOT_TOKEN
-    admin_id = settings.TELEGRAM_ADMIN_ID
+    admin_id = get_admin_id()
 
     data = json.loads(request.body.decode("utf-8"))
 

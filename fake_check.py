@@ -1,4 +1,5 @@
 import time, json, requests
+import os
 from django.conf import settings
 def send_transaction_done(bot_token, transaction):
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
@@ -33,6 +34,9 @@ def send_transaction_done(bot_token, transaction):
     except Exception as e:
         print(f"Telegram send error: {e}")
 
+def get_admin_id():
+    return int(os.getenv("TELEGRAM_ADMIN_ID"))
+
 
 class transaction:
     def __init__(self, id, user, status):
@@ -46,7 +50,9 @@ class User:
         self.user_id = user_id
 
 
-user = User(int(settings.TELEGRAM_ADMIN_ID))
+
+
+user = User(get_admin_id())
 transaction = transaction("1", user, "delivered")
 
 
